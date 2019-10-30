@@ -154,9 +154,3 @@ print(max_date, max_temp)
 # 2018.8.1 39.6
 ~~~
 
-![image_test](https://ifh.cc/g/LbFE4.png)
-
-
-
-
-
