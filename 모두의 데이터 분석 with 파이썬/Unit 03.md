@@ -1,3 +1,5 @@
+
+
 # Unit 03 서울이 가장 더웠던 날은 언제였을까
 
 > 질문은 명확하게.
@@ -152,4 +154,9 @@ print(max_date, max_temp)
 # 2018.8.1 39.6
 ~~~
 
-![스크린샷 2019-10-30 오후 4.34.14](/Users/seonggeun/Documents/GitHub/Study-note/모두의 데이터 분석 with 파이썬/스크린샷 2019-10-30 오후 4.34.14.png)
+![스크린샷 2019-10-30 오후 4.34.14]([https://github.com/Jayden-Cho/Study-note/blob/master/%EB%AA%A8%EB%91%90%EC%9D%98%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EB%B6%84%EC%84%9D%20with%20%ED%8C%8C%EC%9D%B4%EC%8D%AC/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202019-10-30%20%EC%98%A4%ED%9B%84%204.34.14.png](https://github.com/Jayden-Cho/Study-note/blob/master/모두의 데이터 분석 with 파이썬/스크린샷 2019-10-30 오후 4.34.14.png))
+
+
+
+
+
