@@ -14,7 +14,7 @@ Matplotlib 불러오기
 import matplotlib.pyplot as plt
 ~~~
 
-
+<br>
 
 ### 기본 그래프 그리기
 
