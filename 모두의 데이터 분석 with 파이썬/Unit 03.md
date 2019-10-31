@@ -153,4 +153,3 @@ print(max_date, max_temp)
 # result: 
 # 2018.8.1 39.6
 ~~~
-
