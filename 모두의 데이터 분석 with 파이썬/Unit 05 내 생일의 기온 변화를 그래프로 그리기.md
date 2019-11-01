@@ -186,3 +186,42 @@ plt.show()
 
 ![figure 5-6](https://i.imgur.com/o6xWBIJ.png)
 
+
+
+### 내 코드
+
+~~~python
+import csv
+import matplotlib.pyplot as plt
+
+f = open('seoul.csv', encoding='cp949')
+data = csv.reader(f)
+next(data)
+temp_high, temp_low, date = [], [], []
+
+for row in data:
+  if row[-1] != '':
+  	for yr in range(1998, 2020):
+    	if row[0] == str(i) + "." + '2.23' :
+      	temp_high.append(float(row[-1]))
+        temp_low.append(float(row[-2]))
+        date.append(row[0])
+
+table_high, table_low = dict(zip(temp_high, date)), dict(zip(temp_low, date))
+
+print('가장 더웠던 날은', str(max(temp_high))+'도였던', table_high[max(temp_high)],'.')
+print('가장 추웠던 날은', str(min(temp_low))+'도였던', table_low[min(temp_low)], '.')
+
+plt.rc('font', family='AppleGothic')
+plt.rcParams['axes.unicode_minus'] = False
+plt.title('내 생일의 기온 변화 그래프')
+plt.plot(list(range(1998, 2019)), temp_high, label='최고 기온')
+plt.plot(list(range(1998, 2019)), temp_low, label='최저 기온')
+plt.legend()
+plt.xlabel('연도')
+plt.ylabel('기온(C)')
+plt.show()
+~~~
+
+![figure 5-7](https://i.imgur.com/BYTXaF3.png)
+
