@@ -16,9 +16,7 @@
 
 **딕셔너리(Dictionary)**
 
-딕셔너리에는 순서가 없는 대신 키(Key)가 존재.
-
-- 물건에 포스트잇으로 라벨을 붙이는 것.
+딕셔너리에는 순서가 없는 대신 키(Key)가 존재. 물건에 포스트잇으로 라벨을 붙이는 것과 비슷.
 
 ~~~python
 purse = dict() # purse = {}로도 생성 가능.
@@ -32,7 +30,7 @@ print(purse)
 
 <br>
 
-candy라는 키에 저장된 값에 접근하려면
+candy라는 키에 저장된 값(value)에 접근하려면
 
 ~~~python
 print(purse['candy'])
@@ -70,7 +68,7 @@ print(purse)
 
 <br>
 
-파이썬으로 표현하면:
+파이썬으로 사람의 방식을 표현하면:
 
 ~~~python
 ccc = dict()
@@ -166,7 +164,8 @@ print(words)
 ~~~python
 for word in words:
   counts[word] = counts.get(word, 0) + 1
-print(counts.)
+print(counts)
+# result: {'The': 1, 'general': 1, 'pattern': 1, 'to': 1, 'count': 1, 'the': 1, 'words': 1}
 ~~~
 
 <br>
@@ -175,7 +174,7 @@ print(counts.)
 
 딕셔너리에 저장된 데이터를 다룰 때도 유용하게 사용됨.
 
-- counts라는 딕셔너리를 for 반복문에 넣고 실행하면, 딕셔너리의 키와 값이 각각 출력됨.
+- counts라는 딕셔너리를 for 반복문에 넣고 다음과 같이 실행하면, 딕셔너리의 키와 값이 각각 출력됨.
 
 ~~~python
 counts = { 'chuck' : 1 , 'fred' : 42, 'jan': 100}
@@ -248,26 +247,7 @@ for aaa, bbb in jjj.items() :
 
 <br>
 
-### 파일에 저장된 데이터 읽어와서 빈도 분석하기
-
-**내가 만든 코드**
-
-~~~python
-word_dict = dict()
-word_list = sentence.split(" ")
-
-for word in word_list:
-    word_dict[word] = word_dict.get(word, 0) + 1
-
-max_val = 0
-for i in word_dict.values():
-    if max_val < i:
-        max_val = i
-        
-print(max_val)
-~~~
-
-<br>
+**파일에 저장된 데이터 읽어와서 빈도 분석하기**
 
 키와 값의 쌍을 출력할 수 있도록 items 메소드를 사용.
 
@@ -294,6 +274,33 @@ for word, count in counts.items() :
     
 print(bigword, bigcount)
 ~~~
+
+**내가 만든 코드**
+
+~~~python
+# bigword, bigcount 활용해 가장 많이 나온 단어 찾기.
+# 1. sentence를 line으로 분해(이미 한줄이라면 생략).
+# 2. 분해된 line, split()으로 리스트 생성.
+# 3. 리스트 get() 함수로 딕셔너리로 변환.
+# items() 메소드로 key, value 이용, 빈도수 높은 단어 찾기.
+
+word_dict = dict()
+sentence = 'The general pattern to count the words in a line of text is to split the line into words, then loop through the words and use a dictionary to track the count of each word independently.'
+word_list = sentence.split()
+
+for word in word_list:
+    word_dict[word] = word_dict.get(word, 0) + 1
+    
+bigword, bigcount = 0, 0
+for key, value in word_dict.items() :
+    if bigcount < value:
+        bigcount = value
+        bigword = key
+    
+print(bigcount, bigword)
+~~~
+
+
 
 
 
