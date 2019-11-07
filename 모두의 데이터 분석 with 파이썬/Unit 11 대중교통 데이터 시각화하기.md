@@ -261,6 +261,10 @@ for row in data:
 
 조금 더 보완한 코드.
 
+**모든 역의 유무임 승하차 비율을 파이 차트로 나타내기**
+
+- 그래프 이미지를 저장하기 위해 savefig() 함수 사용.
+
 ~~~python
 import csv
 import matplotlib.pyplot as plt
@@ -275,8 +279,65 @@ plt.rc('font', family='AppleGothic')
 
 for row in data:
   for i in range(4, 8):
-    row[i] = 
+    row[i] = int(row[i])
+  plt.figure(dpi=300) 
+  plt.pie(row[4:8], labels=label, colors=color, autopct='%1.1f%%')
+  plt.title(row[3]+' '+row[1])
+  plt.savefig(row[3]+' '+row[1]+'.png')
+  plt.show()
 ~~~
+
+![A](https://i.imgur.com/sNaHcRP.png)
+
+<br>
+
+**내가 작성한 코드 : 호선별 유무임 승하차 비율**
+
+~~~python
+import csv
+import matplotlib.pyplot
+
+f = open('subwayfee.csv')
+data = csv.reader(f)
+next(data)
+
+cost_ride, cost_off, free_ride, free_off = [], [], [], []
+for i in range(9):
+    cost_ride.append([])
+    cost_off.append([])
+    free_ride.append([])
+    free_off.append([])
+
+label = ['유임승차', '유임하차', '무임승차', '무임하차']
+color = ['#14CCC0', '#389993', '#FF1C6A', '#CC14AF']
+plt.rc('font', family='AppleGothic')
+
+for row in data:
+    for n in range(9):
+        for i in range(4, 8):
+            row[i] = int(row[i])
+        if (str(n+1)+'호선') in row[1]:
+            cost_ride[n].append(row[4])
+            cost_off[n].append(row[5])
+            free_ride[n].append(row[6])
+            free_off[n].append(row[7])
+            
+
+for i in range(9):
+    cost_ride[i] = sum(cost_ride[i])
+    cost_off[i]  = sum(cost_off[i])
+    free_ride[i] = sum(free_ride[i])
+    free_off[i] = sum(free_off[i])
+
+sub = list(zip(cost_ride, cost_off, free_ride, free_off))
+
+for i in range(9):
+    plt.pie(sub[i], labels=label, colors=color, autopct='%1.1f%%', startangle=90)
+    plt.title(str(i+1)+'호선 승하차 비율')
+    plt.show()
+~~~
+
+![A](https://i.imgur.com/ra0se5L.png)
 
 
 
