@@ -25,6 +25,7 @@ for row in data:
     for i in row[106:] :
       i = i.replace(",", "")
       f.append(int(i))
+    break
 
 plt.style.use('ggplot')
 plt.figure(figsize=(10, 5), dpi=300)
