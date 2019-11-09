@@ -350,3 +350,60 @@ print(a<0)
 # result: [ True  True  True  True  True False False False False False]
 ~~~
 
+<br>
+
+이 마스크를 다시 배열에 적용하면 조건에 부합하는 데이터만 남음.
+
+~~~python
+print(a[a<0])
+# result: [-5 -4 -3 -2 -1]
+~~~
+
+<br>
+
+마스크를 변수에 넣어서 사용할 수도 있음.
+
+~~~python
+mask1 = abs(a) > 3 # 원소의 절대값이 3보다 더 크다
+print(a[mask1])
+# result: [-5 -4 4]
+~~~
+
+<br>
+
+몇 개의 마스크를 연결해서 사용할 수도 있음.
+
+~~~python
+mask1 = abs(a) > 3
+mask2 = abs(a) % 2 == 0
+print(a[mask1+mask2]) # 둘 중 하나의 조건이라도 참일 경우
+print(a[mask1*mask2]) # 두 가지 존이 모두 참일 경우
+# result: 
+# [-5 -4 -2  0  2  4]
+# [-4  4]
+~~~
+
+<br>
+
+**numpy 라이브러리를 사용하여 재미있는 버블차트 그리기**
+
+~~~python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.randint(-100, 100, 1000)
+y = np.random.randint(-100, 100, 1000)
+size = np.random.rand(100) * 100
+mask1 = abs(x) > 50
+mask2 = abs(y) > 50
+x = x[mask1+mask2]
+y = y[mask1+mask2]
+
+plt.scatter(x, y, s=size, c=x, cmap='jet', alpha=0.7)
+plt.colorbar()
+plt.show()
+~~~
+
+![A](https://i.imgur.com/votjdpe.png)
+
+https://docs.scipy.org/doc/numpy/index.html 에서 자세한 내용 확인 가능.
