@@ -1,10 +1,6 @@
 # Unit 05 내 생일의 기온 변화를 그래프로 그리기
 
-> 데이터에 질문하기
->
-> 데이터 시각화하기
->
-> 날짜 데이터 추출하기
+> 내 생일의 기온 변화(최고 기온, 최저 기온) 그래프로 그리기.
 
 <br>
 
@@ -143,7 +139,7 @@ plt.show()
 ~~~python
 plt.rc('font', family='AppleGothic')
 plt.title("내 생일의 기온 변화 그래프")
-# 마지막 코드 넣어야 기호 깨지지 않고 출력됨.
+# 마지막 코드 넣어야 (-) 기호 깨지지 않고 출력됨.
 plt.rcParams['axes.unicode_minus'] = False
 ~~~
 
@@ -188,7 +184,7 @@ plt.show()
 
 
 
-### 내 코드
+### 내 코드 ver.1
 
 ~~~python
 import csv
@@ -225,3 +221,40 @@ plt.show()
 
 ![figure 5-7](https://i.imgur.com/BYTXaF3.png)
 
+### 내 코드 ver.02
+
+~~~python
+import matplotlib.pyplot as plt
+import numpy as np
+import csv
+
+f = open('seoul.csv', encoding='cp949')
+data = csv.reader(f)
+next(data)
+
+temp_high, temp_low = [], []
+yr = np.arange(1998, 2019)
+
+for row in data:
+    if row[-1] != '':
+        year = row[0].split(".")[0]
+        month = row[0].split(".")[1]
+        day = row[0].split(".")[2]    
+        if year >= '1998':
+            if month == '2' and day == '23': 
+                temp_high.append(float(row[-1]))
+                temp_low.append(float(row[-2]))
+                           
+plt.style.use('ggplot')
+plt.rc('font', family='AppleGothic')
+plt.rcParams['axes.unicode_minus'] = False
+plt.plot(yr, temp_high, 'r', label='최고 기온')
+plt.plot(yr, temp_low, 'b', label='최저 기온')
+plt.xlabel('연도')
+plt.ylabel('기온(C)')
+plt.title('내 생일의 기온 변화 그래프')
+plt.legend()
+plt.show()
+~~~
+
+![A](https://i.imgur.com/NaVmw6H.png)

@@ -1,12 +1,10 @@
 # Unit 06 기온 데이터 다양하게 시각화하기
 
-> 데이터에 질문하기
+> 1월과 8월의 최고 기온 데이터를 히스토그램으로 시각화하기
 >
-> 히스토그램
+> 8월 일별 최고 기온 데이터를 상자 그림으로 표현하기
 >
-> 기온 데이터를 히스토그램으로 표현하기
->
-> 기온 데이터를 상자 그림으로 표현하기
+> 2018년 8월 일교차, 최고, 최저 온도 그래프로 표현하기
 
 <br>
 
@@ -149,6 +147,7 @@ import matplotlib.pyplt as plt
 f = open('seoul.csv', encoding='cp949')
 data = csv.reader(f)
 next(data)
+
 aug = []
 
 for row in data:
@@ -163,7 +162,7 @@ plt.show()
 
 ![6-9](https://i.imgur.com/gJnB1tt.png)
 
-결괏값이 종 모양, 정규 분포표처럼 나타남.
+결괏값이 종 모양(정규 분포표)처럼 나타남.
 
 - 역대 8월에는 최고 기온이 30도 정도였던 날이 가장 많고, 그 전후로 분포가 떨어짐.
 
@@ -176,8 +175,9 @@ import csv
 import matplotlib.pyplot as plt
 
 f = open('seoul.csv', encoding='cp949')
-data - csv.reader(f)
+data = csv.reader(f)
 next(data)
+
 jan, aug = [], []
 
 for row in data:
@@ -230,10 +230,6 @@ plt.show()
 
 ![6-11](https://i.imgur.com/20V1Z6l.png)
 
-> 다른 위치 값이 알고 싶다면:
->
-> import numpy as np
->
 > 25%값: np.percentile(result, 25)
 >
 > 50%값: np.percentile(result, 50)
@@ -251,6 +247,7 @@ import matplotlib.pyplot as plt
 f = open('seoul.csv', encoding='cp949')
 data = csv.reader(f)
 next(data)
+
 result = []
 
 for row in data:
@@ -274,6 +271,7 @@ import matplotlib.pyplot as plt
 f = open('seoul.csv', encoding='cp949')
 data = csv.reader(f)
 next(data)
+
 jan, aug = [], []
 
 for row in data:
@@ -304,6 +302,8 @@ plt.show()
 ~~~
 
 ![6-14](https://i.imgur.com/gjDMX19.png)
+
+훨씬 더 보기 편하다.
 
 <br>
 
@@ -361,7 +361,7 @@ for row in data:
 
 plt.style.use('ggplot') # (1) 그래프 스타일 지정
 plt.figure(figsize=(10, 5), dpi=300) # (2) 그래프 크기 수정
-plt.boxplot(day, showfilers=False) # (3) 아웃라이어 값 생략
+plt.boxplot(day, showfliers=False) # (3) 아웃라이어 값 생략
 
 plt.show()
 ~~~
@@ -412,3 +412,36 @@ plt.show()
 ~~~
 
 ![app](https://i.imgur.com/G8a8ZAj.png)
+
+**ver.02**
+
+~~~python
+import matplotlib.pyplot as plt
+import csv
+
+f = open('seoul.csv', encoding='cp949')
+data = csv.reader(f)
+next(data)
+
+th, tl, tc = [], [], []
+    
+for row in data:
+    y = row[0].split(".")[0]
+    m = row[0].split(".")[1]
+    d = row[0].split(".")[2]
+    if row[-1] != '':
+        if y == '2018' and m == '8':
+            th.append(float(row[-1]))
+            tl.append(float(row[-2]))
+            tc.append(float(row[-1]) - float(row[-2]))
+
+plt.rc('font', family='AppleGothic')
+plt.figure(figsize=(10, 5))
+plt.plot(th, 'r', label='최고 기온')
+plt.plot(tl, 'b', label='최저 기온')
+plt.plot(tc, 'purple', label='일교차')
+plt.title('2018.08 일교차와 온도 차이 그래프')
+plt.legend()
+plt.show()
+~~~
+
