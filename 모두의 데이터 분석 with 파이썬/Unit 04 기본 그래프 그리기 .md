@@ -1,5 +1,11 @@
 # Unit 04 기본 그래프 그리기 
 
+>그래프 선 모양 바꾸기
+>
+>그래프 마커로 그리기
+>
+>​		모두 색상, 제목, 범례 넣기
+
 ### matplotlib 라이브러리?
 
 파이썬에서 데이터를 시각화하는데 matplotlib이 주로 많이 사용됨.
@@ -20,7 +26,7 @@ import matplotlib.pyplot as plt
 
 **간단한 그래프**
 
-plot() 함수는 직선 또는 꺾은선 형태의 그래프를 그릴 때 사용할 수 있는 명령어.
+plot() 함수는 **직선 또는 꺾은선 형태**의 그래프를 그릴 때 사용할 수 있는 명령어.
 
 ~~~python
 import matplotlib.pyplot as plt
