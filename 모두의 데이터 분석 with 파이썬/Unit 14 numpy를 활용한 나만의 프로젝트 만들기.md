@@ -1,6 +1,6 @@
 # Unit 14 numpy를 활용한 나만의 프로젝트 만들기
 
-
+> 우리 동네 인구 구조와 가장 비슷한 곳의 인구 구조와 궁금한 지역의 인구 구조를 시각화하기
 
 우리 동네 인구 구조와 가장 비슷한 곳을 찾는 간단한 프로젝트 만들기.
 
@@ -409,6 +409,5 @@ plt.legend()
 plt.show()
 ~~~
 
+![A](https://i.imgur.com/OsxzUcA.png)
 
-
-https://i.imgur.com/OsxzUcA.png
