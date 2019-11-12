@@ -149,7 +149,7 @@ f.reverse()
 ~~~python
 import csv
 
-f = open('age.csv', encoding='cp949')
+f = open('gender.csv', encoding='cp949')
 data = csv.reader(f)
 m, f = [], []
 
@@ -169,7 +169,7 @@ for row in data:
 import csv
 import matplotlib.pyplot as plt
 
-f = open('age.csv', encoding='cp949')
+f = open('gender.csv', encoding='cp949')
 data = csv.reader(f)
 m, f = [], []
 
@@ -195,7 +195,7 @@ plt.show()
 import csv
 import matplotlib.pyplot as plt
 
-f = open('age.csv', encoding='cp949')
+f = open('gender.csv', encoding='cp949')
 data = csv.reader(f)
 m, f = [], []
 
@@ -225,7 +225,7 @@ plt.show()
 import csv
 import matplotlib.pyplot as plt
 
-f = open('age.csv', encoding='cp949')
+f = open('gender.csv', encoding='cp949')
 data = csv.reader(f)
 m, f = [], []
 name = input('찾고 싶은 지역의 이름을 알려주세요 : ')

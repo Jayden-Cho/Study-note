@@ -1,5 +1,9 @@
 # Unit 09 우리 동네 인구 구조를 파이 차트로 나타내기
 
+>제주도의 성별 인구 비율 파이차트로 표현하기
+
+
+
 항아리 모양의 그래프로는 어떤 성별의 비율이 높을지 알기 어려움. **파이 차트로 비율을 비교.**
 
 <br>
@@ -211,6 +215,23 @@ print(size)
 
 ~~~python
 import matplotlib.pyplot as plt
+import csv
+
+f = open('gender.csv', encoding='cp949')
+data = csv.reader(f)
+size = []
+name = input('찾고 싶은 지역의 이름을 알려주세요 : ')
+
+for row in data:
+  if name in row[0]:
+    m, f = 0, 0
+    for i in range(101): # 나이 데이터의 구간 개수
+      m += int(row[i+3])
+      f += int(row[i+106])
+    break
+size.append(m)
+size.append(f)
+print(size)
 
 plt.rc('font', family='AppleGothic')
 color = ['crimson', 'darkcyan']
@@ -220,4 +241,25 @@ plt.show()
 ~~~
 
 ![9-11](https://i.imgur.com/AKRQHR5.png)
+
+**직접 작성한 코드 Ver.01**
+
+~~~python
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+df = pd.read_csv('gender.csv', encoding='cp949', index_col=0, thousands=",")
+
+name = input('찾고 싶은 지역의 이름을 알려주세요 : ')
+df2 = df[df.index.str.contains(name)]
+gen = pd.concat([np.sum(df2[df2.columns[2:103]], axis=1), 
+                 np.sum(df2[df2.columns[105:]], axis=1)])
+
+plt.rc('font', family='AppleGothic')
+color = ['crimson', 'darkcyan']
+gen.plot.pie(colors=color, autopct='%1.1f%%', startangle=90)
+plt.title(name+' 지역의 남녀 성별 비율')
+plt.show()
+~~~
 
