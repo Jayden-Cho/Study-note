@@ -1,5 +1,7 @@
 # Unit 07 우리 동네 인구 구조 시각화하기
 
+> 우리 동네 인구 구조 시각화하기
+>
 > '인구 통계의 변화는 미래와 관련된 것 가운데 정확한 예측을 할 수 있는 유일한 사실.' - 피터 드러커
 
 <br>
@@ -157,3 +159,43 @@ plt.show()
 > ggplot 스타일 외에도 다양한 스타일 적용 가능.
 >
 > - print(plt.style.available)로 적용 가능한 스타일의 이름 확인 가능.
+
+<br>
+
+**직접 작성한 코드 Ver.01**
+
+~~~python
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+df = pd.read_csv('age.csv', encoding='cp949', index_col=0, thousands=",")
+
+df2 = df[df.index.str.contains('평안동')].astype(int)
+del df2['2019년02월_계_총인구수'], df2['2019년02월_계_연령구간인구수']
+
+plt.style.use('ggplot')
+df2.T.plot()
+plt.show()
+~~~
+
+<br>
+
+**Ver.02**
+
+~~~python
+# Unit 07
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+df = pd.read_csv('age.csv', encoding='cp949', index_col=0, thousands=",")
+
+df2 = df[df.index.str.contains('평안동')].astype(int)
+df3 = df2[df2.columns[2:104]]
+
+plt.style.use('ggplot')
+df3.T.plot()
+plt.show()
+~~~
+
