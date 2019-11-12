@@ -1,5 +1,7 @@
 # Unit 08 인구 구조를 다양한 형태로 시각화하기
 
+>우리 동네 인구 구조 항아리 모양 그래프로 그리기
+
 Unit 07에서 살펴보았던 인구 데이터를 다양한 형태로 시각화하기.
 
 <br>
@@ -34,7 +36,7 @@ plt.show()
 1. 인구 구조가 궁금한 지역의 이름을 input() 함수로 입력받음.
 2. 입력받은 내용이 포함된 값을 찾기.
 3. 그래프 스타일 설정.
-4. 한글 제목을 넣기 위해 폰트를 맑은 고딕으로 설정.
+4. 한글 제목을 넣기 위해 폰트를 애플고딕으로 설정.
 
 <br>
 
@@ -128,7 +130,7 @@ plt.show()
 ~~~python
 import csv
 
-f = open('age.csv', encoding='cp949')
+f = open('gender.csv', encoding='cp949')
 data = csv.reader(f)
 m, f = [], []
 
@@ -246,4 +248,20 @@ plt.show()
 ~~~
 
 ![8-12](https://i.imgur.com/UzXX6v4.png)
+
+**직접 작성한 코드 Ver.01**
+
+- df로 저장까지는 성공했으나 아직 df를 항아리 모양 그래프로 plot() 하는 방법 찾지 못함.
+
+~~~python
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+
+df = pd.read_csv('gender.csv', encoding='cp949', index_col=0, thousands=",")
+
+df2 = df[df.index.str.contains('평안동')].astype(int)
+m = -df2[df2.columns[2:103]]
+fm = df2[df2.columns[105:]]
+~~~
 
