@@ -1,5 +1,9 @@
 # Unit 11 대중교통 데이터 시각화하기
 
+>모든 역의 유무임 승하차 비율을 파이 차트로 나타내기
+
+
+
 수도권 대중교통 데이터는 국가기관이 아닌 티머니 홈페이지(https://www.t-money.co.kr)에서 제공.
 
 ### 지하철 유무임별 이용현황 데이터 정제하기
@@ -295,7 +299,7 @@ for row in data:
 
 ~~~python
 import csv
-import matplotlib.pyplot
+import matplotlib.pyplot as plt
 
 f = open('subwayfee.csv')
 data = csv.reader(f)
