@@ -26,9 +26,6 @@ def main():
     
 # Block 2: 함수를 execute.
 main()
-
-# notes
-# Block 1에서는 함수를 정의하고 Block 2에서 함수를 실행시킴.
 ~~~
 
 <br>
@@ -55,36 +52,20 @@ def main():
 
 ~~~python
 # Definition Part
-class HelloWorld: # class declaration
-    # instantiation created
-    # 특별한건 밑줄 두번 그음. 적절한 시기에 자동으로 불러지게 설계됨.
-    # __init__, __del__에 대해선 다음 시간에 더 자세히.
-    
-    def __init__(self): # 함수 definition과 동일. 특이점은 Parameter에 self 존재.
-                        # Method로 선언되면 parameter에 self가 있어야.
-                        # self: 자기 자신을 의미. self를 통해 정보에 접근.
-                        # Class가 instantiation을 통해 instance로 생성될 때
-                        #   __init__이 발생. 
+class HelloWorld:
+    def __init__(self): 
         print("Hello World! Just one more time")
-    # instantiation deleted
-    def __del__(self): # instance가 없어질 때 __del__ 실행.
+    def __del__(self): 
         print("Good bye!")
-    # input parameter 존재.
-    #    밑의 score1, score2를 불러옴.
-    # self는? world()의 값.
-    #     self는 점(.) 앞의 값. 다시말해 world() 그 자체.
     def performAverage(self, val1, val2):
         average = ( val1 + val2 ) / 2.0
         print("The average of the scores is : ", average)
-       
-# Class를 이용하는 것을 함수화.    
+           
 def main():
-    # HelloWorld(): 빵틀. instance template. HelloWorld()라는 클래스를 만든 것.
-    # world: 빵. instance storage variable. 인스턴스임.
     world = HelloWorld() 
     score1, score2 = input("Enter two scores separated by a comma: ").split(",")
-    world.performAverage(int(score1), int(score2)) # world(인스턴스)에 담긴 함수 하나를 
-                                                   # 실행.
+    world.performAverage(int(score1), int(score2)) 
+    
 # Execution part
 main()
 ~~~
