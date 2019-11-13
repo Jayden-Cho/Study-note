@@ -8,7 +8,7 @@
 
 **Procedure-Oriented Program**
 
-- Funtion 기반 프로그램.
+- Function 기반 프로그램.
 - Block 1에서는 함수를 정의하고 Block 2에서 함수를 실행시킴.
 
 **전체 코드**
@@ -58,7 +58,7 @@ class HelloWorld:
     def __del__(self): 
         print("Good bye!")
     def performAverage(self, val1, val2):
-        average = ( val1 + val2 ) / 2.0
+        average = (val1 + val2) / 2.0
         print("The average of the scores is : ", average)
            
 def main():
@@ -72,7 +72,7 @@ main()
 
 <br>
 
-**details**
+**detail**
 
 ~~~python
 class HelloWorld():
@@ -88,7 +88,7 @@ def __init__(self):
 ~~~
 
 - 함수 definition과 동일. 특이점은 Parameter에 `self` 존재.
-  - `self`: 자기 자신을 의미. `self` 를 통해 정보에 접근.
+  - `self`: 자기 자신을 의미. `self` 를 통해 정보에 접근. `self`는 인스턴스라고 생각하자.
   - 이처럼 method로 선언되면 paramter에 `self` 있어야.
 - Class가 instantiation을 통해 instance로 생성될 때 `__init__`  이 발생.
 
@@ -161,7 +161,7 @@ def main():
 
 - 명사 위주로 정하기. 어떤 정보가 저장되어 있는지 잘 나타내야(다른 Naming도 마찬가지).
 - 소문자로 대부분 시작.
-  - Ex) numOfStats, scoreOfExam.
+  - ex) numOfStats, scoreOfExam.
 
 - Python에서는 data type 선언할 필요 없음. 나중에 변수에 assign되면 그것에 따라 data type이 결정됨.
   - 다른 언어들은 `intCount` 처럼 변수명 앞에 data type을 적어줌.
