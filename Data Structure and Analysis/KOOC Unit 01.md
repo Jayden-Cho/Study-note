@@ -261,3 +261,143 @@ print(strTestComp, strTest == strTestComp)
 
 -  String variable is actually a linear collection of letters, and the letters have indexes.
 
+<br>
+
+# List, Tuple, Dictionary
+
+****
+
+**Index in Sequence**
+
+This index applies to strings as well as tuples, lists.
+
+- Applies to any sequence variables.
+
+~~~python
+strTest = 'Hello World! ISE'
+print(strTest[1:3]) # 실제 인덱스 범위는 1부터 2.
+print(strTest[1:9:2]) # 1부터 8까지 2씩 띄어서 가기. 그래서 1, 3, 5, 7.
+print(strTest[1::2]) # 1부터 끝까지 2씩 띄어서 가기.
+print(strTest[5::-1]) # 5부터 역순으로 1씩 띄어서 가기. 그래서 5, 4, 3, 2, 1, 0. 6글자 출력.
+# 이동방향이 (-)일땐 기존과 다르게 끝까지 간다. [1:3]하면 2까지 밖에 안가지만.
+
+# result:
+# el
+# el o
+# el ol!IE
+#  olleH --> 한 칸 띄워진거 이상한게 아니라 인덱스 5가 공란이라서.
+~~~
+
+<br>
+
+**List**
+
+Another type of sequence variables.
+
+~~~python
+lstTest = list(range(1, 20, 3))
+print(lstTest) 
+lstTest.append('A')
+del lstTest[0] # 리스트에서 인덱스 0에 있는 값을 지우는 것.
+print(lstTest)
+lstTest.remove(4) # 4를 리스트에서 지우는 것.
+print(lstTest)
+lstTest.sort()
+print(lstTest) 
+
+# result:
+# [1, 4, 7, 10, 13, 16, 19]
+# [4, 7, 10, 13, 16, 19, 'A']
+# [7, 10, 13, 16, 19, 'A']
+# TypeError: '<' not supported between instances of 'str' and 'int'
+# python 3에서는 int와 str 값의 비교가 불가함.
+~~~
+
+<br>
+
+**Tuple**
+
+Tuple and List are almost alike.
+
+- Only different in changing values. Tuple does not allow value changes.
+
+~~~python
+tplTest = (1, 2, 3)
+tplTest[0] = 100
+
+# result:
+# TypeError: 'tuple' object does not support item assignment
+
+
+# 여러 사람이 코딩을 하다보면 고정된(Constant)상수가 필요할 때가 온다.
+# 고정되어야 할 값을 바꿀 수 없게끔 고정시킬 때 종종 사용.
+~~~
+
+<br>
+
+**Dictionary**
+
+Also a collection variable type.
+
+- Not sequential and works by a pair of keys and values.
+
+~~~Python
+dicTest = {1:'one', 2:'two', 3:'three'}
+print(dicTest[1]) # Dict에서는 []안의 값이 인덱스가 아니라 key 값.
+dicTest[1] = 'hana'
+print(dicTest)
+
+# result: 
+# one
+# {1: 'hana', 2: 'two', 3: 'three'}
+~~~
+
+<br>
+
+# Condition and Loop Statement
+
+**if**
+
+- if, elif boolean: Statements for True.
+- else boolean: Statements for False.
+- Python does not have a switch-case statement.
+
+<br>
+
+**for**
+
+- Some useful statements for loops
+  - `continue`, `break`
+
+~~~python
+for itr in range(1, 100, 10):
+    if itr == 51: 
+        continue # 51이 나오면 건너뛰기
+    else:
+        print(itr,end=" ") # 한 줄에 출력되게
+        
+# result: 
+# 1 11 21 31 41 61 71 81 91
+
+for itr in range(5):
+    print(itr, end=' ')
+else:
+    print('!')
+print('done')
+
+# result:
+# 0 1 2 3 4 !
+# done
+
+for itr in range(5):
+    if itr == 3:
+        break
+    print(itr, end=' ')
+else:
+    print('!')
+print('done')
+
+# result: 
+# 0 1 2 done
+~~~
+
