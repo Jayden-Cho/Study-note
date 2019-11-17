@@ -405,3 +405,121 @@ print('done')
 
 # Function Statement
 
+For, if, while loop 모두 control하기 위해 사용되는 statement. Function을 정의할 수 있게 해줌.
+
+~~~python
+def name(params):
+  statements
+  return var1, var2
+~~~
+
+- Can return multiple variables.
+  - Keep them in order.
+- Don't have to specify return types.
+- One line function is called **lambda** function.
+
+~~~python
+numA, numB = 1, 2
+
+def multiply(numParam1, numParam2):
+  	return numParam1*2, numParam1*3 
+
+def increase(numParam1, step=1)
+		return numParam1+step
+
+numD, numE = multiply(numA, numB) # result: 2 3
+numF = increase(numA, 5) # result: 6
+numG = increase(numA) # result: 2
+
+lambdaAdd = lambda numParam1, numParam2 : numParam1 + numParam2
+
+numH = lambdaAdd(numA, numB) # result: 2 3
+~~~
+
+<br>
+
+**Sample Program: Finding Prime Numbers**
+
+~~~python
+def isPrimeNumber(numParam1):
+  	for itr in range(2, numParam1):
+      	if numParam1 % itr == 0:
+        		break
+    else:
+      	return True
+    return False
+  
+def findPrime(numParam1, numParam2):
+  	NumCount = 1
+    for itr in range(numParam1, numParam2):
+      	if isPrimeNumber(itr) == True:
+         	  print(NumCount,' th prime : ', itr)
+          	NumCount += 1
+          
+findPrime(1, 10)
+
+# result: 
+# 1  th prime :  1
+# 2  th prime :  2
+# 3  th prime :  3
+# 4  th prime :  5
+# 5  th prime :  7
+~~~
+
+<br>
+
+# Assignment and Equivalence
+
+상수와 상수 비교는 많이 해왔지만, object나 리스트 값 사이 비교는 까다로움.
+
+~~~python
+x = [1, 2, 3]
+y = [100, x, 120] # nested list
+z = [x, 'a', 'b'] # nested list
+
+print('x :',x)
+print('y :',y)
+print('z :',z)
+
+x[1]  = 1717 # x 안의 값이 바뀌면 xlist를 포함하고 있는 nested list 모두 값이 바뀜.
+
+print('\nx :',x)
+print('y :',y) # y는 x를 reference한다 (기존의 [1, 2, 3]을 먼저 가져온게 아니라, 그때그때마다 불러옴.)
+print('z :',z) # z는 x를 reference한다.
+
+x[1] = 2
+x2 = [1, 2, 3]
+
+# x를 reference하기 때문에 xlist의 값이 바뀌어도 유연하게 대처할 수 있는 것. 
+if x == x2:
+    print('Values are equivalent.')
+else:
+    print('Values are not equivalent.')
+
+# is는 reference, 저장 장소가 같으냐에 대한 관점에서의 비교.
+# False가 출력됨. 비록 값은 같지만 다른 reference(다른 저장 장소)를 가지고 있기 때문에.
+if x is x2:
+    print('Values are stored at the same place.')
+else:
+    print('Values are not stored at the same place.')
+    
+# True가 출력됨. x[1]이나 y[1][1] 모두 같은 reference인 xlist에서 가져오기 때문에.
+if x[1] is y[1][1]:
+    print('Values are stored at the same place.')
+else:
+    print('Values are not stored at the same place.')
+~~~
+
+Why this happended?
+
+- Because of references.
+- x has two references from y and z.
+- The values of y and z are determined by x, and x is changed.
+
+`==`
+
+- Checks the equivalence of two reference values.
+
+`is`
+
+- Chekcs the equivalence of two referenced object's IDs.
