@@ -98,7 +98,7 @@ def __init__(self):
 del __del__(self):
 ~~~
 
-- instance가 없어질 때 `__del__` 실행.
+- instance가 없어질 때 `__del__` 실행. **Destructor**.
 
 <br>
 
@@ -523,3 +523,82 @@ Why this happended?
 `is`
 
 - Chekcs the equivalence of two referenced object's IDs.
+
+<br>
+
+# Class and Instance
+
+설계도(class) -(Instantiation)-> 실제 집(instance)
+
+~~~python
+# class definition
+class MyHome:
+    # 2 variables, and 4 functions.
+    colorRoof = 'red'
+    stateDoor = 'closed'
+    # self는 instance(homeAt...)를 의미.
+    def paintRoof(self, color):
+        self.colorRoof = color
+    def openDoor(self):
+        self.stateDoor = 'open'
+    def closeDOor(self):
+        self.stateDoor = 'close'
+    def printStatus(self):
+        print("Roof color is",self.colorRoof+', and door is',self.stateDoor+'.')
+
+# function call
+homeAtDaejeon = MyHome() # homeAtDaejeon에 MyHome()의 한 instance가 들어감.
+homeAtSeoul = MyHome()
+homeAtDaejeon.paintRoof('blue')
+homeAtDaejeon.printStatus()
+homeAtSeoul.printStatus()
+
+# result:
+# Roof color is blue, and door is closed.
+# Roof color is red, and door is closed.
+~~~
+
+<br>
+
+**Important Methods in Class - Constructor, Destructor**
+
+Some basic methods, or member function in classes.
+
+- Constructor
+  - Called when instantiated.
+- Destructor
+  - Called when the instance is removed from the value table.
+
+~~~python
+from time import ctime
+
+class MyHome:
+    colorRoof = 'red'
+    stateDoor = 'closed'
+    def paintRoof(self, color):
+        self.colorRoof = color
+    def openDoor(self):
+        self.stateDoor = 'open'
+    def closeDoor(self):
+        self.stateDoor = 'close'
+    def printStatus(self):
+        print("Roof color is", self.colorRoof+", and door is",self.stateDoor+'.')
+    # constructor의 self는 존재하지 않음.
+    # 나중에 instance화 된 자신을 말하는 것. Return 되는 값이 self. 
+    def __init__(self, strAddress):
+        print("Built on", strAddress)
+        print("Built at", ct ime())
+    def __del__(self):
+        print("Destroyed at", ctime())
+
+homeAtDaejeon = MyHome('Daejeon KAIST') # Constructor parameter에 들어갈 내용 입력.
+homeAtDaejeon.printStatus()
+del homeAtDaejeon
+
+# result:
+# Built on Daejeon KAIST
+# Built at Tue Nov 19 09:40:58 2019
+# Roof color is red, and door is closed.
+# Destroyed at Tue Nov 19 09:40:58 2019
+~~~
+
