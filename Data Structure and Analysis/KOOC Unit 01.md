@@ -607,3 +607,147 @@ del homeAtDaejeon
 # Destroyed at Tue Nov 19 09:40:58 2019
 ~~~
 
+<br>
+
+<br>
+
+# Module and Import
+
+한 번 코드를 짜면 그 후에 발전시키고 활용할 때가 있다.
+
+- 그렇다 보면 프로그램 자체가 부득히하게 길어진다.
+- 대부분 한 파일에는 한 클래스를 사용한다.
+
+여러 개의 클래스를 엮어서 활용하고 싶으면?
+
+- `import module`
+
+~~~python
+'''
+Home.py 파일
+'''
+from time import ctime # time = package, ctime = imported from package
+
+class MyHome:
+  # member variable - 클래스에 속한 variable. 클래스의 상태를 저장.
+  colorRoof = 'red'
+  stateDoor = 'closed'
+  # member function
+  def paintRoof(self, color):
+    self.colorRoof = color
+  def openDoor(self):
+    self.stateDoor = 'open'
+  def closeDoor(self):
+    self.stateDoor = 'close'
+  def printStatus(self):
+    print("Roof color is", self.colorRoof+", and door is",self.stateDoor+".")
+  # 생성자(constructor)
+  def __init__(self, strAddress):
+    print("Built on", strAddress)
+    print("Built at", ctime())
+  # 소멸자(destructor)
+  def __del__(self):
+    print("Destroyed at", ctime())
+~~~
+
+지금 생성한 `Home.py` 파일을 `UsingMyHome.py`에서 실행한다.
+
+~~~python
+'''
+UsingMyHome.py 파일
+'''
+# 위에서 생성한 Home.py를 import.
+# Home.py를 import했으므로 자동으로 MyHome class 사용 가능.
+import Home
+
+homeAtDaejeon = Home.MyHome("KAIST Daejeon") # MyHome의 constructor가 strAddress를 원하므로 변수에 작성.
+homeAtDaejeon.printStatus()
+'''
+result:
+    Built on Daejeon KAIST # 생성자 part.
+    Built at Tue Nov 19 09:40:58 2019
+    Roof color is red, and door is closed.
+    Destroyed at Tue Nov 19 09:40:58 2019  # 소멸자 part.
+'''
+~~~
+
+<br>
+
+**Organizing Modules by Package**
+
+Directory, or folder
+
+- Cluster modules
+  - Modules -> filename.py
+- We call these directories as package
+- Hence, the previous information is exactly
+  - `from package import module`
+
+Package has
+
+- `__init__.py` in the directory
+- This is how to differentiate between the ordinary and the package directories
+
+~~~python
+# .py 생략하고 import.
+# 같은 directory안에 있으면 from 구문 생략 가능.
+from Users.Documents.Python.projects import Home
+~~~
+
+<br>
+
+**Sample Program: Interaction with Your Program**
+
+~~~python
+# class definition.
+class CashierLine:
+    # Member variable(attribute)
+    lstLine = []
+    # Member function(method)
+    def addCustomer(self, strName):
+        self.lstLine.append(strName) # strName을 lstLine에 넣는다.
+    def processCustomer(self):
+        strReturnName = self.lstLine[0] # lstLine의 첫 번째 요소를 strReturnName에 저장.
+        self.lstLine.remove(strReturnName) # 저장된 요소를 lstLine에서 제거.
+        return strReturnName # 제거된 그 요소를 출력.
+    def printStatus(self):
+        strReturn = "" # 초기 세팅 상태는 빈칸.
+        for itr in range(len(self.lstLine)): # lstLine에 들어있는 개수만큼 반복.
+            strReturn += self.lstLine[itr] + " " # 반복해서 strReturn이라는 것에 더하기.
+        return strReturn # 더해진 값들을 출력.
+     
+binLoop = True
+line = CashierLine() # instance 생성 후 line에 저장.
+while binLoop: # True일 때 까지 반복.
+    strName = input("Enter customer name : ") # strName에 입력된 값을 저장.
+    if strName == ".": # 입력된 값이 점(.)이면
+        break # while loop 탈출. print문으로 넘어감.  
+    elif strName == "->": # 입력된 값이 화살표라면
+        print("Processed :", line.processCustomer()) 
+        print("Line :", line.printStatus())
+    else: # 입력된 값이 점, 화살표가 아니면
+        line.addCustomer(strName)
+        print("Line :", line.printStatus())
+print("Number of remaining customers :", len(line.lstLine)) # break로 탈출 후 lstLine의 길이를 출력.
+
+# result:
+'''
+Enter customer name : A
+Line : A 
+Enter customer name : B
+Line : A B 
+Enter customer name : C
+Line : A B C 
+Enter customer name : ->
+Processed : A
+Line : B C 
+Enter customer name : ->
+Processed : B
+Line : C 
+Enter customer name : .
+Number of remaining customers : 1
+'''
+~~~
+
+
+
