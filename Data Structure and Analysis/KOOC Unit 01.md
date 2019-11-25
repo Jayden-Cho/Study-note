@@ -47,6 +47,7 @@ def main():
 
 - Class 기반 프로그램.
 - `HelloWorld`가 object, `__init__`, `__del__`, `performAverage` 는 method.
+  -  `__init__`, `__del__` 은 특별한 메소드인 생성자(constructor)
 
 **전체 코드**
 
@@ -108,8 +109,8 @@ def performAverage(self, val1, val2):
     print("The average of the scores is : ", average)
 ~~~
 
-- input paramter 존재(val1, val2).
-  - 하단 `main()`  함수의 score1, score2를 불러옴.
+- input paramter 존재(`val1`, `val2`).
+  - 하단 `main()` : 함수의 `score1`, `score2`를 불러옴.
 - `self` 는?
   - `world`. `self` 는 점(.) 앞의 값. 다시 말해 `world` 그 자체.
 
@@ -184,7 +185,7 @@ def main():
 **Comments(주석)**
 
 - 주석을 달면 execution이나 declaration에 영향을 주지 않음.
-  1. 블록주석 (''' ''') (""" """)
+  1. 블록주석 (`''' '''`) (`""" """`)
   2. `#` 사용.
 
 <br>
@@ -263,6 +264,8 @@ print(strTestComp, strTest == strTestComp)
 
 <br>
 
+<br>
+
 # List, Tuple, Dictionary
 
 ****
@@ -294,6 +297,8 @@ print(strTest[5::-1]) # 5부터 역순으로 1씩 띄어서 가기. 그래서 5,
 
 Another type of sequence variables.
 
+- `del` 은 입력된 인덱스 위치에 있는 값을 제거하고, `remove` 는 입력된 값을 제거.
+
 ~~~python
 lstTest = list(range(1, 20, 3))
 print(lstTest) 
@@ -319,7 +324,7 @@ print(lstTest)
 
 Tuple and List are almost alike.
 
-- Only different in changing values. Tuple does not allow value changes.
+- Only different in <u>changing values</u>. Tuple does not allow value changes.
 
 ~~~python
 tplTest = (1, 2, 3)
@@ -358,8 +363,8 @@ print(dicTest)
 
 **if**
 
-- if, elif boolean: Statements for True.
-- else boolean: Statements for False.
+- `if`, `elif` boolean: Statements for True.
+- `else` boolean: Statements for False.
 - Python does not have a switch-case statement.
 
 <br>
@@ -393,7 +398,7 @@ for itr in range(5):
     if itr == 3:
         break
     print(itr, end=' ')
-else:
+else: # else loop도 break되서 for loop과 함께 탈출된다.
     print('!')
 print('done')
 
@@ -433,7 +438,7 @@ numG = increase(numA) # result: 2
 
 lambdaAdd = lambda numParam1, numParam2 : numParam1 + numParam2
 
-numH = lambdaAdd(numA, numB) # result: 2 3
+numH = lambdaAdd(numA, numB) # result: 3
 ~~~
 
 <br>
@@ -528,7 +533,7 @@ Why this happended?
 
 # Class and Instance
 
-설계도(class) -(Instantiation)-> 실제 집(instance)
+`설계도(class)` -(Instantiation)-> `실제 집(instance)`
 
 ~~~python
 # class definition
