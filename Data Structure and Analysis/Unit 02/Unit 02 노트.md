@@ -354,5 +354,175 @@ Sun
 '''
 ~~~
 
+<br>
 
+# Polymorphism and Abstract Class
 
+**Polymorphism**
+
+- Polymorphism - 다양한 모양. 공통적으론 같지만 세부 내용이 다르다.
+  - Poly : Many
+  - Morph : Shape
+  - Different behaviors with <u>similar signature</u>.
+    - Signature  = Method name + Parameter list. 메소드 이름이 같아도 구성품이 다르면 다른거다.
+  - **Method Overriding**
+    - Base class has a method A(num), and its derived class has a method A(num). 그렇다면 Base class의 A를 무시하고 새로이 정의된 class의 A로 override.
+  - **Method Overloading** 
+    - A class has a method A(num), A(num, name). 메소드 이름은 같지만 param이 달라 overload 된다.
+
+<br>
+
+~~~python
+class Building:
+    strAddress = "Daejeon"
+    def openDoor(self):
+        print("Door Opened")
+
+class Hotel(Building):
+  	# override
+    def openDoor(self):
+        print("Bellboy opens a door")
+    def checkIn(self):
+        print("Someone checks in for 1 day")
+    def checkIn(self, days):
+        print("Someone checks in for", days, "days")
+
+lotteHotel = Hotel()
+lotteHotel.openDoor()
+lotteHotel.checkIn()
+lotteHotel.checkIn(2)
+~~~
+
+<br>
+
+~~~python
+class Building:
+    strAddress = "Daejeon"
+    def openDoor(self):
+        print("Door Opened")
+
+class Hotel(Building):
+  	# override
+    def openDoor(self):
+        print("Bellboy opens a door")
+    def checkIn(self, days = 1):
+        print("Someone checks in for", days, "days")
+        
+lotteHotel = Hotel()
+lotteHotel.openDoor()
+lotteHotel.checkIn()
+lotteHotel.checkIn(2)
+
+# result:
+# Bellboy opens a door
+# Someone checks in for 1 days
+# Someone checks in for 2 days
+~~~
+
+<br>
+
+**Abstract Class**
+
+- Abstract class, or Abstract Base Class in Python.
+  - A class with an <u>abstract method</u>. 
+  - What is the abstract method?
+    - Method <u>with signature</u> but with no implementation. 시그니쳐만 있는 메소드. 세부 내용은 없다.
+    - Why use it then?
+    - I want to have a window here, but I don't know how it will look like, but you shoule have a window here!
+      - 사람들이 여러 명 작업할 때, Window 클래스를 만들었다치자. Abstract class를 만들었다는 의미는 '일단 Window() 어떻게 만들던 상관없다. 다만 문이 열리게끔 알아서 코딩해라'라는 것.
+  - Abstract class is not a complete implementation, it is more like a half-made produce.
+  - Therefore, you can't make an instance. 실제로 설계되지 않은 그냥 틀만 있는 상태이기 때문에. 
+- The concrete with full implementations and inheriting the abstract class will be a basis for instances.
+
+~~~python
+# abstract class를 만드려면 abc 모듈 import.
+from abc import ABC, abstractmethod
+
+class Room(ABC):
+    @abstractmethod
+    def openDoor(self):
+        pass
+    @abstractmethod
+    def openWindow(self):
+        pass
+      
+# Room class는 그저 틀이고 그것을 이용하려면 개별 class를 만들고 그 안의 method들을 채워넣고 instantiate해야 작동한다.
+class BedRoom(Room):
+  	# 껍데기만 있던 openDoor()를 채워넣는다.
+    def openDoor(self):
+        print("Open bedroom door")
+    def openWindow(self):
+        print("Open bedroom window")
+
+# 이것처럼 abstract class의 메소드 중 하나만 구현한다면 에러가 발생.
+class Lobby(Room):
+    def openDoor(self):
+        print("Open lobby door")
+
+room1 = BedRoom()
+print(issubclass(BedRoom, Room), isinstance(room1, Room))
+
+lobby1 = Lobby()
+print(issubclass(Lobby, Room), isinstance(lobby1, Room))
+
+# result:
+# True True
+# TypeError: Can't instantiate abstract class Lobby with abstract methods openWindow
+~~~
+
+<br>
+
+**Overriding Methods in object**
+
+- All of Python classes are the descendants of *object*. 그니까 모든 class들은 *object*라는 클래스의 자손.
+  - If you don't specify the base class of your class, then your class is the direct derived class of *object*. 특정 inheritance를 선언하지 않으면 *object*가 inherit된다.
+- *object* has many hidden methods:
+  - `__init__` : Constructor
+  - `__del__` : Destructor
+  - `__eq__` : Equality. 값을 비교하는 것.
+  - `__cmp__` : Comparison
+  - `__add__` : 더하기.
+- You override them to make the methods behave as you please.
+
+~~~python
+# Inheritance가 없는 상황. ()가 없다. 그렇다면 Inheritance는 object.
+class Room:
+    numWidth = 100
+    numHeight = 100
+    numDepth = 100
+		# 기존의 object에 있는 method에 override해 constructor를 생성한다.
+    def __init__(self, parWidth, parHeight, parDepth):
+        self.numDepth = parDepth
+        self.numWidth = parWidth
+        self.numHeight = parHeight
+    def getVolume(self):
+        return self.numDepth*self.numHeight*self.numWidth
+    def __eq__(self, other):
+        if isinstance(other, Room):
+          	# Duck Typing. 덕 테이프. 
+            # Room은 class인거 알지만, other는 어떤게 들어올지 class 설계 당시에는 모른다. 만약 class가 아닌 다른 형태가 들어온다면 후에 실행할 때 다른 형이면 에러 발생. Easier to Ask for Forgiveness then Permission(EAFP)
+            if self.getVolume() == other.getVolume():
+                return True
+        return False
+      
+room1 = Room(100, 20, 30)
+room2 = Room(100, 10, 60)
+print(room1 == room2)
+
+# result:
+# True
+~~~
+
+<br>
+
+Duck Typing
+
+~~~python
+        if isinstance(other, Room):
+            if self.getVolume() == other.getVolume():
+                return True
+~~~
+
+- Room은 class인거 알지만, other는 어떤게 들어올지 class 설계 당시에는 모른다.
+- 만약 class가 아닌 다른 형태가 들어온다면 후에 실행할 때 다른 형이면 에러가 발생한다.
+- Easier to Ask for Forgiveness then Permission (EAFP).
