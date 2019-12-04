@@ -526,3 +526,243 @@ Duck Typing
 - Room은 class인거 알지만, other는 어떤게 들어올지 class 설계 당시에는 모른다.
 - 만약 class가 아닌 다른 형태가 들어온다면 후에 실행할 때 다른 형이면 에러가 발생한다.
 - Easier to Ask for Forgiveness then Permission (EAFP).
+
+<br>
+
+# UML notation 2
+
+**More about UML Notations**
+
+현실에서는 다양한 UML이 존재한다.
+
+- Many types of UML diagrams used for different stages of development. 
+  - Use-case diagram
+  - <u>Class diagram</u>
+  - State diagram
+  - Deployment diagram
+- We are dealing with OOP in this week.
+  - Mainly, class and instances.
+  - Also, some of software design patterns.
+  - Hence, we focus on
+    - *Class diagram*.
+  - OOP에 집중하기 때문에 Class diagram에 알아보는 중.
+
+<br>
+
+**UML notation : Class and Instance(one more time)**
+
+~~~
+'''
+Abstract class - Person
+Class - Customer
+Named instance - Park::Customer
+Unnamed instance - :Customer
+'''
+~~~
+
+- `Cusotmer`를 사용하려면 Abstract class인 `Person` class를 override(Inherit)해야 한다.
+
+~~~
+Visibility options
++ → public
+# → protected
+- → private
+~~~
+
+- Visibility options는 <u>encapsulation</u>의 특성을 만드는 데 활용된다.
+
+<br>
+
+~~~
+						Park::Customer 
+-ID : String
+# AccountNum : Integer
++ Name : String = Hey
++ logIn() : void
++ requestWithdrawal() : Boolean
++ confirmSecurityCard() : Boolean
+~~~
+
+- `+ logIn()` 같은 것을 Method signature라고 부른다.
+  - Method signature가 동일한 경우 <u>Method override</u>가 가능하다. (물론 super class와 자식 클래스 사이)
+  - Method signautre가 similar할 경우 <u>Method overload</u>가 가능하다.
+
+<br>
+
+**Structure of Classes in Class Diagram**
+
+![a](https://i.imgur.com/aXtoh4R.png)
+
+- 클래스 사이의 직선 - Association. Association으로 클래스 간의 관계를 알 수 있음.
+
+- Generalization(Hollow point arrow) - Inheritance. Credit, Cash, Check class 모두 일반적으로(공통적으로) Payment라는 속성을 가지고 있다.
+
+- Aggregation(마름모꼴 화살표)
+
+<br>
+
+# Structure and Relationship
+
+  **Generalization**
+
+- Generalization의 모든 관계, 특성은 inheritance-based.
+
+- Generalization between classes:
+  - *is-a* relationship.
+    - Customer *is-a* Person. 
+  - <u>Inheritance relationship</u>.
+  - `Customer`(sub) → `Person`(super)
+    - Direction of generalization : From subclass to superclass
+  - Hollow triangle shape.
+- Base class
+  - Person
+- Leaf class
+  - Park::Customer. Person class의 맨 끝에 달린 잎사귀들.
+
+<br>
+
+**Association**
+
+~~~python
+# '하나의' customer가 '여러 개의' accounts를 가지고 있다.
+class Customer:
+    ID = "No one"
+    lstAccounts = [] # 여러 개의 계정을 넣어둘 곳.
+    def addBankAccount(self, account):
+        self.lstAccounts.append(account)
+
+# '하나의' account가 '하나의' customer를 가지고 있다.
+class BankAccount:
+    strAccountHolder = "No one"
+    def changeAccountHolder(self, holder):
+      	# 하나의 AccountHolder만 가질수 있다.
+        self.strAccountHolder = holder    
+~~~
+
+- Association between classes
+
+  - <u>*has-a*</u> relationship. '어떤 클래스가 무엇을 가지고 있다'라는 관계.
+  - Member variables(Attribute)
+    - Multiplicity 정보를 필요로 함. 예를 들어 무언가가 얼마만큼을 가지고 있다.
+    - A customer *has-a* number of holding accounts.
+      - '하나의' customer가 '여러 개의' accounts를 가지고 있다.
+    - An account *has-an* account holder customer.
+      - '하나의' account가 '하나의' customer를 가지고 있다.
+  - 표현 방법 : Simple line. 화살표 없는 라인. 화살표 있다면 '→'.
+  - If a simple arrow is added, 방향성을 나타내는 것.
+    - A customer has a <u>reference</u> to bank accounts.
+      - 고객 클래스가 계좌 클래스를 레퍼런스할 권한(정보)을 가지고 있다.
+    - A bank account has a <u>reference</u> to a customer
+    - Navigability. 화살표 방향을 navigate.
+    - 그니까 화살표가 있으면 reference처럼 하나가 일방적인 관계를 가지고 있고, 화살표가 없으면 상호 보완적인 관계를 가지고 있다.
+
+  ![a](https://i.imgur.com/JsDSaC3.png)
+
+  - Line ends are tagged by roles
+    - `Account holder`
+      -  `Customer`의 관점에서 볼 때, `Customer`는 `BankAccount`를 들고 있는 `Account Holder`이다.
+    - `Holding accounts`
+      - `BankAccount`의 관점에서 볼 때, `BankAccount`는 `Customer`가 들고 있는 `Holding Accounts`이다.
+    - With prefix showing the visibility
+      - `+` : public, `-` : private, `#` : protected
+    - `1`과 `*`의 관계는 일대다 관계.
+      - `Customer`는 `BankAccount`를 *개 가질수 있지만, 반대로 `BankAccount`는 `Customer`를 한 개 가질수 있다.
+
+<br>
+
+**Multiplicity of Association**
+
+- In CS and Eng,
+  - `*` often means many.
+  - Hence,
+    - `1..*` : 1 to Many
+    - `*` : 0 to Many. `0..*`와 같다.
+      - 위의 `BankAccount`에 `*`였던 이유는 계좌가 0개부터 *개까지 있을 수 있기 때문에.
+  - Naturally,
+    - `1` : Exactly one
+    - `0..1` : One or zero
+- If not specified, it means one.
+
+<br>
+
+**Aggregation**
+
+![a](https://i.imgur.com/6U2kKHE.png)
+
+- Special case of association.
+  - <u>Special</u> *has-a* relationship.
+  - More like, <u>*part-whole*</u> or <u>*part-of*</u> relationship
+  - A family member is a <u>part of</u> a family.
+    - The existence of the family depends one the aggregation of the family member
+    - If nothing to aggregate, there is no family. 
+      - `FamilyMember`가 하나도 없을 경우, `Family` 또한 존재하지 않는다.
+  - <u>Hollow diamond shape.</u>
+- Aggregation often occur:
+  - When an aggregating class is a <u>collection class</u>.
+  - When the collection class's life cycle depends on the collected classes.
+
+<br>
+
+**Dependency**
+
+~~~python
+class Calculator:
+    def calculateSomething(self):
+        return ....
+
+class Engineer:
+    def drawFloorplan(self):
+      	# Method 내부에 있는 변수라 Method가 끝나면 저장되지 않고 사라진다.
+        calc = Calculator()
+        value = calc.calculateSomething()
+        return value
+~~~
+
+- Dependency between classes
+  - <u>*use*</u> relationship. 다른 클래스를 import해서 import한 메소드를 이용하는 것.
+  - An engineer *uses* a calculator.
+    - May use for 
+      - Local variables
+      - Method signatures
+        - Parameter types
+      - Method return types
+  - Something that you import for the implementation
+  - 점선으로 관계가 표현된다.
+
+<br>
+
+**Let's Practice**
+
+![a](https://i.imgur.com/CJ4wX4M.png)
+
+<br>
+
+`Customer` --(line)-- `Order`. **Association**
+
+- 주문을 처음 해본 사람부터 여러 번 해본 사람까지 다양하게 존재하기 때문에 `Order`와  `0..*` 관계를 가진다.  
+  - 쉽게 말해, `Customer`는 0명부터 *명까지 존재할 수 있다.
+
+- `Order`는 무조건 한 명의 고객이 주문을 하기 때문에 `Customer`와  `1`의 관계를 가진다.
+  - 쉽게 말해, `Order`는 무조건 한 번이다. 고객 한 명에 주문 하나만 할당된다.
+
+<br>
+
+`Order` <--(diamond arrow)-- `OrderDetail`. **Aggregation**
+
+- `Order`는 여러 개 (한개 이상)의 `OrderDetail`을 가질 수 있지만, `OrderDetail`이 없다면 `Order`는 존재하지 않는다.
+
+<br>
+
+`OrderDetail` --(Simple Arrow)--> `Item`. **Association** 
+
+- `OrderDetail`은 `Item`을 하나를 가지고 있어야 한다. 반대로 `Item`은 `OrderDetail`을 `0..*`개 가질 수 있다.
+  - 아이템 자체는 한 번도 주문이 안됐었을 수도 있고, 인기 상품이라 여러 번 주문됐을 수도 있다. 
+- `OrderDetail`에서 `Item`으로 단방향 화살표를 들고 있다.
+  - `OrderDetail`은 `Item`의 정보를 가지고 있다. 반대로 `Item`은 `OrderDetail`의 정보를 하나하나 가지고 있지는 않다.
+  - `OrderDetail`은 `Item`을 정의할 수 있는 하나의 변수가 있어야 한다.  
+
+<br>
+
+`Order` --(Simple Arrow)--> `Payment`
+
+- `Order`를 할수 있는 방법은 여러가지이므로 `1..*`. 반대로 `Payment`는 하나의 `Order`에만 적용이 된다.
