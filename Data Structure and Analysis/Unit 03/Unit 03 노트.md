@@ -70,9 +70,8 @@
 
 - Array (in our Python example, List, yet we will use only its index function)
   - <u>Each element</u> is accessible by **index**.
-  - Index is typically zero or a positive integer
-  - Very simple creation
-    - Thay's why people use it
+  - Index is typically zero or a positive integer.
+  - Very simple creation. 파이썬은 리스트 생성이 매우 간단하다.
 
 - Array는 일반적인 프로그래밍 언어들에서의 명칭이고, 파이썬에서는 List라 부른다.
 - Array는 '동일한 data를 index를 활용해 저장, access 할수 있는 것' 
@@ -85,8 +84,6 @@ x[0] = 'a'
 x[4] = 'f'
 ~~~
 
-- 파이썬은 리스트 생성이 매우 간단하다.
-
 <br>
 
 **Search procedure in array**
@@ -94,19 +91,20 @@ x[4] = 'f'
 - Let's find 'd' and 'c' from the list in an array.
   - Of course, you can use `in`, but we commit ourselves to use indexes only.
   - 파이썬만의 특징이기 때문에, 다른 언어에선 사용 불가. 원초적인 방법부터 알아보자.
-- Then navigating from the first to the last until hit is the only way. 처음부터 마지막까지 search. index가 증가하기 때문에 단방향이다.
+- Then navigating from the first to the last until hit is the only way. 
+  - 처음부터 마지막까지 search. index가 증가하기 때문에 단방향이다.
 
 <br>
 
 **Insert procedure in array**
 
 - Let's insert 'c' between 'b' and 'd' in the list *(a = insert position index)*
-  - First, make new list, or y, with six cells
-  - Second, copy the reference link of `x[0:a-1]` to `y[0:a-1]` *(retrieval cnt.: a)*
-  - Thrid, put a reference link to 'c' in `y[a]` *(retrieval cnt.: 1)*
-  - Fourth, copy the reference links of `x[a:]` to `y[a+1:]` *(retrieval cnt.: n-a-1)*
-  - Fifth, change x's reference to y's reference
-  - Total count of retrievals = a+1 + n-a-1 = n
+  - First, make new list, or y, with six cells.
+  - Second, copy the reference link of `x[0:a-1]` to `y[0:a-1]`. *(retrieval cnt.: a)*
+  - Thrid, put a reference link to 'c' in `y[a]`. *(retrieval cnt.: 1)*
+  - Fourth, copy the reference links of `x[a:]` to `y[a+1:]`. *(retrieval cnt.: n-a-1)*
+  - Fifth, change x's reference to y's reference.
+  - Total count of retrievals = a+1 + n-a-1 = **n**
 
 ~~~python
 x = ['a', 'b', 'd', 'e', 'f']
@@ -136,11 +134,11 @@ x = y   # x가 y를 reference. 기존의 x는 사라지고 새로운 리스트�
 **Delete procedure in array**
 
 - Let's remove 'd' in the list *(a = delete position index)*
-  - First, make new list, or y, with five cells
-  - Second, copy the reference links of `x[0:a-1]` to `y[0:a-1]` *(retrieval cnt. : a)*
-  - Third, copy the reference links of `x[a+1]` to `y[a]` *(retrieval cnt. : n-a-1)*
-  - Fourth, change x's reference to y's reference
-  - Total count of retrievals = a+n - n-a-1 = n-1
+  - First, make new list, or y, with five cells.
+  - Second, copy the reference links of `x[0:a-1]` to `y[0:a-1]`. *(retrieval cnt. : a)*
+  - Third, copy the reference links of `x[a+1]` to `y[a]`. *(retrieval cnt. : n-a-1)*
+  - Fourth, change x's reference to y's reference.
+  - Total count of retrievals = a+n - n-a-1 = **n-1**
 
 ~~~python
 idxDelete = 3
@@ -164,26 +162,16 @@ x = y
 
 **Problems in Array**
 
-- Whenever you put something in or get something out
-  - You have to perform line-wise retrievals
-    - Which is N retrievals
-  - This process is just like that
-    - There is a line of airline passengers
-    - You want to put a passenger in the middle of the line because the filght is about to leave
-    - You are moving all the passengers one step back
-    - Then, you put the customer in the line.
-- What-if we have a magic to create a space in the middle of the line?
-  - Array → you are bounded to the 1-dimension that you have
-  - Linked list → you are bounded no more.
-
-- 우리가 넣고 뺄 때 line-wise retrieval해야 한다.
+- 우리가 데이터를 넣고 뺄 때 line-wise retrieval해야 한다.
   - N개의 retrieval. 5개 정도면 괜찮지만, 100만개 일 때는 문제가 생긴다.
 
 - 공항에서 사람들이 줄 서있다 치자. 근데 어떤 사람이 중간에 들어가고 싶다 할 때, 
   - 앞에 있는 사람들은 상관없지만, 뒤에 있는 사람들은 큰일난다. 모두 뒤로 움직여야 한다.
   - 그렇다면, 마법이 있어서 그 사람이 들어갈 자리를 만들어준다 치자. 
     - 소프트웨어에서 가능할까? 할수는 있다. 하지만 그렇게 한다면 선형적 공간이 아니게 될 것.
-- Linked list는 0,1, 2, 3,.. 1차원 선형적으로 저장하지 않는다.
+  - Array → you are bounded to the 1-dimension that you have
+  - Linked list → you are bounded no more.
+    - Linked list는 0,1, 2, 3,.. 1차원 선형적으로 저장하지 않는다.
 
 <br>
 
@@ -252,8 +240,7 @@ else:
       - 그 노드에 어떤 값이 저장될지 알려주는 레퍼런스를 저장한 변수.
   - Special nodes: <u>Head</u>(리스트의 첫 노드) and <u>Tail</u>(리스트의 마지막 노드)
     - Head와 Tail은 object에 아무 것도 저장되지 않음.
-    - You can construct the singly linked list without them.
-    - But, using them makes search, insert, and delete more convenient.
+    - You can construct the singly linked list without them. But, using them makes search, insert, and delete more convenient.
   - Generally, requires more coding than array.
 - 중간에 레퍼런스를 조작하여 공간을 한 번에 생성할 수 있다는 장점이 있지만, 코딩이 길다는 단점도 존재한다.
 - Object에는 값 자체가 저장되어 있지 않고, 단지 reference만 저장되어 있다.
@@ -275,13 +262,14 @@ else:
 
 ~~~python
 class Node:
+  	# 초기 설정
     nodeNext = None
     nodePrev = ''
     objValue = ''
     binHead = False
     binTail = False
 
-    def __init__(self, objValue='', nodeNext=None, binHead=None, binTail=None):
+    def __init__(self, objValue='', nodeNext=None, binHead=False, binTail=False):
         self.nodeNext = nodeNext
         self.objValue = objValue
         self.binHead = binHead
@@ -293,7 +281,7 @@ class Node:
         self.objValue = objValue
     def getNext(self):   # 다음의 노드는 무엇인가
         return self.nodeNext
-    def setNext(self, nodeNext)   # 다음 노드를 정의
+    def setNext(self, nodeNext):   # 다음 노드를 정의
         self.nodeNext = nodeNext
     def isHead(self):
         return self.binHead
@@ -354,8 +342,8 @@ Linked List with Two Nodes
 - This is the moment that you see the power of a linked list
 - Last time, you need N retrievals to insert a value in the array list
 - This time, you need only three operations.
-  - With an assumption that you have a reference to the node, $Node_{prev}$ that you want to put yout new node next.
-  - First, you store a $Node$, or a $Node_{next}$ pointed by a reference from $Node_{prev}$'s nodeNext member variable
+  - With an assumption that you have a reference to the node, $Node_{prev}$ that you want to put your new node next.
+  - First, you store a $Node$, or a $Node_{next}$ pointed by a reference from $Node_{prev}$'s nodeNext member variable.
   - Second, you change a reference from $Node_{prev}$'s nodeNext to $Node_{new}$ 
   - Third, you change a reference from $Node_{new}$'s nodeNext to $Node_{next}$.
 
@@ -408,10 +396,13 @@ class SinglyLinkedList:
     nodeTail = ''
     size = 0
 
+    # Head와 Tail를 생성. 둘 다 Node를 instantiate해서 생성됨.
     def __init__(self):
+      	# 이 상태면 Empty Linked List.
         self.nodeTail = Node(binTail=True)
         self.nodeHead = Node(binHead=True, nodeNext=self.nodeTail)
 
+  
     def insertAt(self, objInsert, idxInsert):
         nodeNew = Node(objValue=objInsert)
         nodePrev = self.get(idxInsert-1)
@@ -444,7 +435,8 @@ class SinglyLinkedList:
     def getSize(self):
         return self.size
 
-list1 = SinglyLinkedList()
+      
+list1 = SinglyLinkedList()   # 빈 Linkd List 생성.
 list1.insertAt('a', 0)
 list1.insertAt('b', 1)
 list1.insertAt('d', 2)
@@ -457,5 +449,214 @@ list1.printStatus()
 
 list1.removeAt(3)
 list1.printStatus()
+
+'''
+result:
+a b d e f 
+a b c d e f 
+a b c e f 
+'''
 ~~~
 
+<br>
+
+# Stack
+
+Linked List 활용해서 구현할 수 있는 자료구조.
+
+<br>
+
+**Scenario for Stack**
+
+- 3명이 택시를 타고 집에 간다. 집은 모두 다른 위치에 있다. 누가 먼저 타야할까? 
+  - 가장 늦게 내리는 사람이 먼저 타고, 먼저 내리는 사람이 늦게 탄다.
+  - 사람들이 언제 내릴지 미리 파악해서 미리 자리를 정해둠.
+- 내리는 곳과 들어가는 곳이 한 곳일 때 **Stack**이라 부른다.
+
+<br>
+
+**Structure of Stack**
+
+- Stacks are linear like linked lists. 선형적인 구조.
+
+  - A variation of a singly linked list. 
+
+- Difference 
+
+  - 중간에 넣고 빼고 그런거 안함.
+
+  - Voluntarily giving up access to the middle in the linked list.
+
+    - Only accesses to the first instance in the list. 오로지 첫 번째 노드만 다룬다.
+
+  - The first instance in the list. 첫 번째 노드를 top이라 부른다.
+
+    = The top instance in the stack
+
+- An item is inserted or removed from the stack from one end called the "top" of the stack.
+
+- This mechanism is called Last-In-First-Out(LIFO).
+
+<br>
+
+**Operation of Stack**
+
+- Stack operation
+  - Push
+    - = Insert an instance at the first in the linked list
+    - = Put an instance at the top in the stack
+  - Pop
+    - = Remove and return an instance at the first in the linked list
+    - = Remove and return an instance at the top in the stack
+- Stack에서는 search, insert, delete 하지 않는다.
+- Push Moon → Push Shin → Push Lee → Pop Lee → Pop Shin → Pop Moon
+
+<br>
+
+**Implementation of Stack**
+
+- Python code of a stack 
+  - Utilizing a singly linked list
+  - To pop an instance
+    - 1 retrieval count
+  - To push an instance
+    - 1 retrieval count
+
+~~~python
+class Stack(object):
+    lstInstance = SinglyLinkedList()
+    def pop(self):
+        return self.lstInstance.removeAt(0)
+    def push(self, value):
+        self.lstInstance.insertAt(value, 0)
+
+stack = Stack()
+stack.push("a")
+stack.push("b")
+stack.push("c")
+
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+
+
+'''
+result:
+c
+b
+a
+'''
+~~~
+
+<br>
+
+**Example: Balancing Symbols**
+
+- Balancing symbols?
+  - `[2+(1+2)]-3` → Symbols are balanced.
+  - `[2+(1+2]-3` → Symbols are not balanced.
+  - Then, just counting opening and closing symbols?
+    - What if? `[2+(1]+2)-3`
+- Algorithm for the balanced symbol checking
+  - Make an empty stack.
+  - read symbols until end of formula.
+    - If the symbol is an opening symbol push it onto the stack
+    - If it is a closing symbol do the following
+      - If the stack is empty, report an error.
+      - Otherwise pop the stack.
+        - If the symbol popped does not math the closing symbol report an error.
+    - At the end of the of formula if the stack is not empty, report an error.
+
+![a](https://i.imgur.com/PdhSXLL.png)
+
+<br>
+
+# Queue
+
+**Scenario for Queue **
+
+- 비행기 탑승 수속하는 것이라 생각하자.	
+  - First in, First out. 먼저 줄 선 사람이 먼저 탑승한다.
+  - 중간에 들어가는 것은 없다.
+
+<br>
+
+**Structure of Queue**
+
+- Queues are linear like linked lists.
+
+  - A variation of a singly linked list.
+
+- Difference 
+
+  - Voluntarily giving up:
+
+    - Access to the middle in the linked list == Same to the stacks.
+    - Only accesses to the first and the last instances in the list.
+
+  - The first instance in the list
+
+    = The front instance in the queue.
+
+  - The last instance in the list
+
+    = The rear instance in the queue.
+
+- An item is inserted at the last.
+
+- An item is removed at the front.
+
+- This mechanism is called First-In-First-Out (FIFO).
+
+<br>
+
+**Operation of Queue**
+
+- Queue operation
+
+  - Enqueue (리스트의 Insert 역할)
+
+    = Insert an instance at the last in the linked list
+
+    = Put an instance at the rear in the queue
+
+  - Dequeue (리스트의 remove 역할)
+
+    = Remove and return an instance at the first in the linked list
+
+    = Remove and return an instance at the front in the queue.
+
+<br>
+
+**Implementatio of Queue**
+
+~~~python
+class Queue(object):
+    lstInstance = SinglyLinkedList()
+    def dequeue(self):
+        return self.lstInstance.removeAt(0)
+    def enqueue(self, value):
+        self.lstInstance.insert(value, self.lstInstance.getSize())
+
+queue = Queue()
+queue.enqueue("a")
+queue.enqueue("b")
+queue.enqueue("c")
+
+print(queue.dequeue())
+print(queue.dequeue())
+print(queue.dequeue())
+
+'''
+result:
+a
+b
+c
+'''
+~~~
+
+<br>
+
+> Stack은 0에 넣고 0을 뺀다.
+>
+> Queue는 맨 뒤에 넣고 0을 뺀다.
