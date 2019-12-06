@@ -1,110 +1,90 @@
-class Node:
-    nodeNext = None
-    nodePrev = ''
-    objValue = ''
-    binHead = False
-    binTail = False
-
-    def __init__(self, objValue='', nodeNext=None, binHead=False, binTail=False):
-        self.nodeNext = nodeNext
-        self.objValue = objValue
-        self.binHead = binHead
-        self.binTail = binTail
-
-    def getValue(self):
-        return self.objValue
-    def setValue(self, objValue):
-        self.objValue = objValue
-    def getNext(self):
-        return self.nodeNext
-    def setNext(self, nodeNext):
-        self.nodeNext = nodeNext
-    def isHead(self):
-        return self.binHead
-    def isTail(self):
-        return self.binTail
-
-node1 = Node(objValue='a')
-nodeTail = Node(binTail=True)
-nodeHead = Node(binHead=True, nodeNext=node1)
-
-class SinglyLinkedList:
-    nodeHead = ''
-    nodeTail = ''
-    size = 0
+import numpy as np
+import matplotlib.pyplot as plt
 
 
-    def __init__(self):
-        # 이 상태면 Empty Linked List.
-        self.nodeTail = Node(binTail=True)
-        self.nodeHead = Node(binHead=True, nodeNext=self.nodeTail)
+class SentiAnalyzer:
 
-    def insertAt(self, objInsert, idxInsert):
-        nodeNew = Node(objValue=objInsert)
-        nodePrev = self.get(idxInsert - 1)
-        nodeNext = nodePrev.getNext()
-        nodePrev.setNext(nodeNew)
-        nodeNew.setNext(nodeNext)
-        self.size = self.size + 1
+    def __init__(self, sentidata, word):
+        self.sentidata = sentidata
+        self.numTraining = 150
+        self.wordLimit = 1500
+        self.dataWord = word
 
-    def removeAt(self, idxRemove):
-        nodePrev = self.get(idxRemove - 1)
-        nodeRemove = nodePrev.getNext()
-        nodeNext = nodeRemove.getNext()
-        nodePrev.setNext(nodeNext)
-        self.size = self.size - 1
-        return nodeRemove.getValue()
+    def runAnalysis(self, idxReview):
+        probLogPositive = 0
+        probLogNegative = 0
+        idxUsedWords, usedWords = self.findUsedWords(idxReview)
 
-    def get(self, idxRetrieve):
-        nodeReturn = self.nodeHead
-        for itr in range(idxRetrieve + 1):
-            nodeReturn = nodeReturn.getNext()
-        return nodeReturn
+        for i in range(len(idxUsedWords)):
+            idxWord = idxUsedWords[i]
+            positive, negative = self.calculateProbWord(idxWord)
 
-    def printStatus(self):
-        nodeCurrent = self.nodeHead
-        while nodeCurrent.getNext().isTail() == False:
-            nodeCurrent = nodeCurrent.getNext()
-            print(nodeCurrent.getValue(), end=" ")
-        print("")
+            probLogPositive += np.log(positive)
+            probLogNegative += np.log(negative)
 
-    def getSize(self):
-        return self.size
+        positiveProb1, negativeProb1 = self.calculateProbReview()
+        probLogPositive += np.log(positiveProb1)
+        probLogNegative += np.log(negativeProb1)
 
+        if self.dataReviewTesting[idxReview] == 1:
+            if probLogPositive > probLogNegative:
+                correct = 1
+            else:
+                correct = 0
+        else:
+            if probLogPositive > probLogNegative:
+                correct = 0
+            else:
+                correct = 1
 
-list1 = SinglyLinkedList()
-list1.insertAt('a', 0)
-list1.insertAt('b', 1)
-list1.insertAt('d', 2)
-list1.insertAt('e', 3)
-list1.insertAt('f', 4)
-list1.printStatus()
+        return probLogPositive, probLogNegative, correct
 
-list1.insertAt('c', 2)
-list1.printStatus()
+    def runWholeAnalysis(self):
+        cnt = 0
+        numCorrect = np.zeros((int(self.numTraining/30)+1, 1))
 
-list1.removeAt(3)
-list1.printStatus()
+        for j in range(0, self.numTraining+1, 30):
+            self.dataSentimentTraining = self.sentidata[self.shuffle[0:j+1], 0:self.wordLimit]
+            self.dataReviewTraining = self.sentidata[self.shuffle[0:j+1], -1]
 
-'''
-result:
-a b d e f 
-a b c d e f 
-a b c e f 
-'''
+            nunCorrect[cnt] = 0
+            for i in range(np.shape(self.dataSentimentTesting)[0]):
+                p, n, c = self.runAnalysis(i)
+                if correct == 1 :
+                    numCorrect[cnt] += 1
 
-class Queue(object):
-    lstInstance = SinglyLinkedList()
-    def dequeue(self):
-        return self.lstInstance.removeAt(0)
-    def enqueue(self, value):
-        self.lstInstance.insert(value, self.lstInstance.getSize())
+            numCorrect[cnt] = numCorrect[cnt] / np.shape(self.dataSentimentTesting)[0]
+            cnt += 1
 
-queue = Queue()
-queue.enqueue("a")
-queue.enqueue("b")
-queue.enqueue("c")
+        return numCorrect
 
-print(queue.dequeue())
-print(queue.dequeue())
-print(queue.dequeue())
+    def runExperiments(self, numReplicate):
+        average = np.zeros((int(self.numTraining/30)+1, 1))
+        averageSq = np.zeros((int(self.numTraining/30)+1, 1))
+
+        for i in range(numReplicate):
+            self.shuffle = np.arange(len(sentidata))
+            np.random.shuffle(self.shuffle)
+
+            self.dataSentimentTesting = self.sentidata[self.shuffle[self.numTraining+1:198], 0:self.wordLimit]
+            self.dataReviewTesting = self.sentidata[self.shuffle[self.numTraining+1:198], -1]
+
+            correct = self.runWholeAnalysis()
+
+            average += correct
+            averageSq += correct * correct
+
+        average = average / numReplicate
+        averageSq = averageSq / numReplicate
+        std = np.sqrt(averageSq - average * average)
+
+        plt.errorbar(np.arange(0, self.numTraining+1, 30), average, std)
+        plt.show()
+
+    def calculateProbWord(self, idx):
+        occurrence = [row[idx] for row in self.dataSentimentTraining]
+        positive = np.
+
+    def calculateProbReview():
+
+    def findUsedWords():

@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f174aaf-6820-4997-bb4e-51890b1081ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Unit 01/Naive Bayes classifier - Conditional probability calculation/SentiAnalyzer.py 분석.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 01/Naive Bayes classifier - Conditional probability calculation/SentiAnalyzer.py 분석.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SentiAnalyzer.py 분석.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/SentiAnalyzer.py 분석.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 03/Unit 03 노트.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 03/Unit 03 노트.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Finance Analysis/Pandas를 이용한 Naver금융에서 주식데이터 가져오기.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Finance Analysis/Pandas를 이용한 Naver금융에서 주식데이터 가져오기.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Finance Analysis/Python을 이용해서 구글에서 주식 정보 가져오기.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Finance Analysis/Python을 이용해서 구글에서 주식 정보 가져오기.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 03/Production line model - Stack and queue implementation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 03/Production line model - Stack and queue implementation/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,14 +29,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SentiAnalyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+            <state relative-caret-position="195">
+              <caret line="65" selection-start-line="65" selection-end-line="95" selection-end-column="18" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#189#473#0" />
                 <element signature="e#521#1767#0" />
                 <element signature="e#1809#2774#0" />
-                <element signature="e#4258#4738#0" />
+                <element signature="e#2828#4206#0" />
                 <element signature="e#4783#5098#0" />
                 <element signature="e#5142#5292#0" />
               </folding>
@@ -51,8 +47,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="95" selection-start-line="95" selection-end-line="109" selection-end-column="22" />
+            <state relative-caret-position="663">
+              <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,7 +92,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="x" value="1121" />
     <option name="y" value="23" />
     <option name="width" value="319" />
@@ -219,7 +218,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="806" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.03862661" />
@@ -279,14 +278,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SentiAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+        <state relative-caret-position="195">
+          <caret line="65" selection-start-line="65" selection-end-line="95" selection-end-column="18" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#189#473#0" />
             <element signature="e#521#1767#0" />
             <element signature="e#1809#2774#0" />
-            <element signature="e#4258#4738#0" />
+            <element signature="e#2828#4206#0" />
             <element signature="e#4783#5098#0" />
             <element signature="e#5142#5292#0" />
           </folding>
@@ -295,8 +294,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="95" selection-start-line="95" selection-end-line="109" selection-end-column="22" />
+        <state relative-caret-position="663">
+          <caret line="85" column="22" selection-start-line="85" selection-start-column="22" selection-end-line="85" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
