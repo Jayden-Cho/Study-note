@@ -4,7 +4,7 @@
     <list default="true" id="cadd2248-ddb3-4745-b3bf-9491dd866b48" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../Unit 02/Naive Bayes classifier - Classifier with prior and likelihood/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 02/Naive Bayes classifier - Classifier with prior and likelihood/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Unit 02/Naive Bayes classifier - Classifier with prior and likelihood/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 02/Naive Bayes classifier - Classifier with prior and likelihood/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Unit 03 노트.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Unit 03 노트.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1121" />
     <option name="y" value="23" />
     <option name="width" value="319" />

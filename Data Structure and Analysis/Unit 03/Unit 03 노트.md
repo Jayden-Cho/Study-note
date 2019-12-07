@@ -1,16 +1,16 @@
-**Weekly Objectives**
+**Unit Objectives**
 
 - Learn the first set of <u>data structures</u>: linked list, stack, and queue.
   - 세 개 모두 선형적.
 - Objectives are:
   - Understanding the definition of <u>abstract data types</u>.
   - Firmly understanding <u>how references work</u>. (매우 중요)
-  - Understanding various linked lsit, stack and queue structures
+  - Understanding various linked list, stack and queue structures.
     - <u>Singly linked list</u>, doubly linked list, circular linked list, ...
-    - Able to implement <u>a stack and a queue</u> with a list
-  - Understanding the procedures of linked list, stack, and queue management
+    - Able to implement <u>a stack and a queue</u> with a list.
+  - Understanding the procedures of linked list, stack, and queue management.
     - Insert, delete, search, ...
-    - Should be able to estimate the number of steps for inserts, deletes, and searches
+    - Should be able to estimate the number of steps for inserts, deletes, and searches.
 
 <br>
 
@@ -56,7 +56,7 @@
   - 다양한 행동들을 <u>추상적으로 표현하는게</u> abstract data types.
 
 - 데이터가 어떤 것이 될 것이고 어떤 operation이 가능한지 설명하는 것.
-  - Class diagram처럼 구조 자체가 이러이러 하다 라고 나타내는 것과 비슷한것 같다. 
+  - Class diagram처럼 '구조 자체가 이러이러 하다'라고 나타내는 것과 비슷한것 같다. 
 
 > 주머니 속이 어떻게 구성, 저장 되어있는지는 모른다. 대신 이 속에 어떤 데이터가 있는지 명시해두었고 어떤 operation을 사용가능한지 명시해둔게 ADT. 
 
@@ -193,15 +193,17 @@ x = [1, 2, 3]
 y = [100, x, 120] # nested list
 z = [x, 'a', 'b'] # nested list
 
-print('x :',x)
-print('y :',y)
-print('z :',z)
+print('x :',x)   # [1, 2 ,3]
+print('y :',y)   # [100, [1, 2, 3], 120]
+print('z :',z)   # [[1, 2, 3], 'a', 'b']
 
 x[1]  = 1717 # x 안의 값이 바뀌면 xlist를 포함하고 있는 nested list 모두 값이 바뀜.
 
-print('\nx :',x)
-print('y :',y) # y는 x를 reference한다 (기존의 [1, 2, 3]을 먼저 가져온게 아니라, 그때그때마다 불러옴.)
-print('z :',z) # z는 x를 reference한다.
+print('\nx :',x)   # [1, 1717 ,3]
+print('y :',y) # [100, [1, 171, 3], 120] 
+							 # y는 x를 reference한다 (기존의 [1, 2, 3]을 먼저 가져온게 아니라, 그때그때마다 불러옴.)
+print('z :',z) # [[1, 1717, 3], 'a', 'b']
+							 # z는 x를 reference한다.
 
 x[1] = 2
 x2 = [1, 2, 3]
@@ -242,7 +244,7 @@ else:
     - Head와 Tail은 object에 아무 것도 저장되지 않음.
     - You can construct the singly linked list without them. But, using them makes search, insert, and delete more convenient.
   - Generally, requires more coding than array.
-- 중간에 레퍼런스를 조작하여 공간을 한 번에 생성할 수 있다는 장점이 있지만, 코딩이 길다는 단점도 존재한다.
+    - 중간에 레퍼런스를 조작하여 공간을 한 번에 생성할 수 있다는 장점이 있지만, 코딩이 길다는 단점도 존재한다.
 - Object에는 값 자체가 저장되어 있지 않고, 단지 reference만 저장되어 있다.
 - Next는 다음 노드를 가리키는 것 뿐 다음 노드의 값이 바뀐다고 해서 레퍼런스가 변하지 않는다.
 
@@ -265,6 +267,7 @@ class Node:
   	# 초기 설정
     nodeNext = None
     nodePrev = ''
+    # Singly라서 Next는 있고 Prev는 없는건가?
     objValue = ''
     binHead = False
     binTail = False
