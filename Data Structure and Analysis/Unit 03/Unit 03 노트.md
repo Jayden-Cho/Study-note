@@ -267,7 +267,7 @@ class Node:
   	# 초기 설정
     nodeNext = None
     nodePrev = ''
-    # Singly라서 Next는 있고 Prev는 없는건가?
+    # Singly라서 Next는 있고 Prev는 없는건가? 	
     objValue = ''
     binHead = False
     binTail = False

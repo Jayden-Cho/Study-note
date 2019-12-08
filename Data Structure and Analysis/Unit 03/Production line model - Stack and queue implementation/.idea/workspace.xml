@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/../../Unit 02/Naive Bayes classifier - Classifier with prior and likelihood/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 02/Naive Bayes classifier - Classifier with prior and likelihood/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Unit 02/Naive Bayes classifier - Classifier with prior and likelihood/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 02/Naive Bayes classifier - Classifier with prior and likelihood/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Unit 03 노트.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Unit 03 노트.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04/Unit 04 노트.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 04/Unit 04 노트.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,10 +138,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1121" y="23" width="319" height="806" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.050786838" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2599278" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
