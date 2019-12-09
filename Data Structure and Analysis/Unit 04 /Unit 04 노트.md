@@ -121,8 +121,8 @@ result:
 **Merge Sort**
 
 - Merge sort: One example of recursive programming
-  - Decompose into two smaller lists
-  - Aggregate to one larger and sorted list
+  - Decompose into two smaller lists.
+  - Aggregate to one larger and sorted list.
 - 키 순서로 서봐. 가장 많이 사간 순서로 서봐. 이런게 sort.
 - Merge sort는 일단 쪼갤 수 없을 때 까지 쪼갠 다음 비교를 시작해 나가는 것. 
 
@@ -131,8 +131,6 @@ result:
 <br>
 
 **Implementation Example: Merge Sort**
-
-
 
 ~~~python
 import random
@@ -205,7 +203,7 @@ result:
 
 - 너무나 function call이 많다.
   - 공간도 많이 필요하고 시간도 많이 걸린다.
-  - 이것의 해결법은 dynamic programming.
-    - ​	한 번 call하고 기록해 두는 것.
+  - 해결법은 <u>dynamic programming</u>.
+    - 한 번 call하고 기록해 두는 것.
 
 <br>

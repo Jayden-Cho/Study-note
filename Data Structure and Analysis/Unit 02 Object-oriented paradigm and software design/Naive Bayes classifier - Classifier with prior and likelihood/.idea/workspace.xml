@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f174aaf-6820-4997-bb4e-51890b1081ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 03/Production line model - Stack and queue implementation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 03/Production line model - Stack and queue implementation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 03/Unit 03 노트.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 03/Unit 03 노트.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Unit 04/Unit 04 노트.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 04/Unit 04 노트.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="14" column="26" lean-forward="true" selection-end-line="34" selection-end-column="40" />
+            <state relative-caret-position="210">
+              <caret line="14" column="26" selection-end-line="34" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -57,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+            <state relative-caret-position="420">
+              <caret line="28" column="29" selection-end-line="45" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -226,14 +224,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="826" y="0" width="614" height="900" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.052447554" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.05293276" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31566265" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31566265" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39915967" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,15 +300,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="14" column="26" lean-forward="true" selection-end-line="34" selection-end-column="40" />
+        <state relative-caret-position="210">
+          <caret line="14" column="26" selection-end-line="34" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+        <state relative-caret-position="420">
+          <caret line="28" column="29" selection-end-line="45" selection-end-column="31" />
         </state>
       </provider>
     </entry>
