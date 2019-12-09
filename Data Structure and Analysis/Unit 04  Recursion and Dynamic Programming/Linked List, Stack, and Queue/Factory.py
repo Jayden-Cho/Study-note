@@ -46,3 +46,4 @@ class Factory(ManufacturingProcess):
             plt.text(50, 100, self.waitingProduct.getListString(), style='italic')
             plt.axis([0, 350, 0, 200])
             plt.show()
+
