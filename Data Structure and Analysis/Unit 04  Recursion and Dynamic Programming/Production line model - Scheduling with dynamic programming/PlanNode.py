@@ -22,3 +22,7 @@ class PlanNode:
     def setPrevNode(self, node):
         # Problem 1. complete this method
         self.prevNode = node
+
+class PlanNode:
+    # 
+    def __init__(self, numNo, strSerialNumber, strModel):

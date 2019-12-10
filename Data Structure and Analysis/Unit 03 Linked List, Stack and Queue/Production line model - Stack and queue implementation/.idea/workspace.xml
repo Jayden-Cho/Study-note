@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cadd2248-ddb3-4745-b3bf-9491dd866b48" name="Default Changelist" comment="" />
+    <list default="true" id="cadd2248-ddb3-4745-b3bf-9491dd866b48" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Production line model - Stack and queue implementation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Production line model - Stack and queue implementation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.idea/Linked List, Stack, and Queue.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.idea/libraries/R_User_Library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.ipynb_checkpoints/PlanNode.py 분석-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.ipynb_checkpoints/ProductionList.py 분석-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/.ipynb_checkpoints/Stack.py, Queue.py 분석-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/Factory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/IE362-Week Offline Week 4-icmoon-ver-1.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/ManufacturingProcess.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/Plan-2012.12.24.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/PlanNode.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/PlanNode.py 분석.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/ProductionList.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/ProductionList.py 분석.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/Queue.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/Stack.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/Stack.py, Queue.py 분석.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Linked List, Stack, and Queue/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/Factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/Factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/ProductionList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/ProductionList.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,16 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProductionList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="73" selection-start-line="73" selection-end-line="86" selection-end-column="18" />
+            <state relative-caret-position="168">
+              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Production line model - Scheduling with dynamic programming/main.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -60,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="733" />
     <option name="y" value="23" />
     <option name="width" value="707" />
@@ -73,17 +108,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Production line model - Stack and queue implementation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Production line model - Stack and queue implementation" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,15 +164,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="737" y="0" width="703" height="900" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="806" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.045385778" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26108727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.24216868" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24089636" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -183,13 +207,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProductionList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="73" selection-start-line="73" selection-end-line="86" selection-end-column="18" />
+        <state relative-caret-position="168">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Production line model - Scheduling with dynamic programming/main.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

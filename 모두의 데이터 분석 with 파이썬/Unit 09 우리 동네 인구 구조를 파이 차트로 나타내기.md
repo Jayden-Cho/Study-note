@@ -260,4 +260,3 @@ gen.plot.pie(colors=color, autopct='%1.1f%%', startangle=90)
 plt.title(name+' 지역의 남녀 성별 비율')
 plt.show()
 ~~~
-

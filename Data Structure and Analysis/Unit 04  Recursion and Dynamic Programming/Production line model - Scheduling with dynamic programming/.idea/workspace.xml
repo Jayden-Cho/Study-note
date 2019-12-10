@@ -2,47 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eddb0b85-e5ef-41d9-a063-92f7f69ddd63" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Unit 03 Linked List, Stack and Queue/Production line model - Stack and queue implementation/.idea/Production line model - Stack and queue implementation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 03 Linked List, Stack and Queue/Production line model - Stack and queue implementation/.idea/Production line model - Stack and queue implementation.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 03 Linked List, Stack and Queue/Production line model - Stack and queue implementation/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 03 Linked List, Stack and Queue/Production line model - Stack and queue implementation/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Unit 03 Linked List, Stack and Queue/Production line model - Stack and queue implementation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 03 Linked List, Stack and Queue/Production line model - Stack and queue implementation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/.idea/Linked List, Stack, and Queue.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/.idea/libraries/R_User_Library.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/Factory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/IE362-Week Offline Week 4-icmoon-ver-1.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/ManufacturingProcess.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/Plan-2012.12.24.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/PlanNode.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/ProductionList.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/Queue.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/Stack.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Linked List, Stack, and Queue/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04 /Unit 04 노트.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04/Linked List, Stack, and Queue/.idea/Linked List, Stack, and Queue.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04/Linked List, Stack, and Queue/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04/Linked List, Stack, and Queue/.idea/libraries/R_User_Library.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04/Linked List, Stack, and Queue/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04/Linked List, Stack, and Queue/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04/Linked List, Stack, and Queue/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/.idea/Production line model - Probabilistic interrupt modeling.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/.idea/libraries/R_User_Library.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/Factory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/IE362-Week Offline Week 5-icmoon-ver-1.pptx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/ManufacturingProcess.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/Plan-2012.12.24.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/PlanNode.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/ProductionList.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/Queue.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/Stack.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Production line model - Probabilistic interrupt modeling/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 05/Unit 05 노트.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.idea/Linked List, Stack, and Queue.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.idea/libraries/R_User_Library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.ipynb_checkpoints/PlanNode.py 분석-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.ipynb_checkpoints/ProductionList.py 분석-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/.ipynb_checkpoints/Stack.py, Queue.py 분석-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/Factory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/IE362-Week Offline Week 4-icmoon-ver-1.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/ManufacturingProcess.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/Plan-2012.12.24.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/PlanNode.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/PlanNode.py 분석.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/ProductionList.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/ProductionList.py 분석.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/Queue.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/Stack.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/Stack.py, Queue.py 분석.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Linked List, Stack, and Queue/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/Factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/Factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/ProductionList.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 05 Application 1_Simulation/Production line model - Probabilistic interrupt modeling/ProductionList.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Factory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="75">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -76,17 +64,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ManufacturingProcess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
+            <state relative-caret-position="195">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/PlanNode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="390">
+              <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -94,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProductionList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
+            <state relative-caret-position="135">
+              <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -103,18 +94,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Queue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="41" selection-end-line="23" selection-end-column="43" />
+            <state relative-caret-position="210">
+              <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Plan-2012.12.24.csv">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Stack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -133,21 +128,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ManufacturingProcess.py" />
-        <option value="$PROJECT_DIR$/PlanNode.py" />
         <option value="$PROJECT_DIR$/Queue.py" />
         <option value="$PROJECT_DIR$/Stack.py" />
         <option value="$PROJECT_DIR$/Factory.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/ProductionList.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/PlanNode.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="582" />
-    <option name="y" value="23" />
-    <option name="width" value="858" />
-    <option name="height" value="806" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1349" />
+    <option name="width" value="91" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -157,23 +151,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Linked List, Stack, and Queue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Linked List, Stack, and Queue" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Linked List, Stack, and Queue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Linked List, Stack, and Queue" type="462c0819:PsiDirectoryNode" />
-              <item name=".ipynb_checkpoints" type="462c0819:PsiDirectoryNode" />
+              <item name="Production line model - Scheduling with dynamic programming" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Production line model - Scheduling with dynamic programming" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ProductionList">
+  <component name="RunManager" selected="Python.main">
     <configuration name="ProductionList" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Linked List, Stack, and Queue" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -254,15 +243,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="730" y="0" width="710" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="806" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.04491018" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14449213" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3325301" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33193278" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -279,29 +268,46 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Plan-2012.12.24.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Queue.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="41" lean-forward="true" selection-start-column="41" selection-end-column="41" />
+        <state relative-caret-position="210">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Stack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        <state relative-caret-position="285">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Plan-2012.12.24.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Factory.py">
+    <entry file="file://$PROJECT_DIR$/ProductionList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="135">
+          <caret line="9" column="48" lean-forward="true" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ManufacturingProcess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -313,34 +319,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ManufacturingProcess.py">
+    <entry file="file://$PROJECT_DIR$/Factory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        <state relative-caret-position="75">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PlanNode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProductionList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="41" selection-end-line="23" selection-end-column="43" />
+        <state relative-caret-position="390">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
         </state>
       </provider>
     </entry>

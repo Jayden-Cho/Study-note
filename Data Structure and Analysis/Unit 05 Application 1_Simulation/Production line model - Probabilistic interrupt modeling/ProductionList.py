@@ -15,7 +15,7 @@ class ProductionList(PlanNode):
 
         if Filename != '':
 
-            f = open(Filename)
+            f = open(Filename, encoding='cp949')
             temp = f.readlines()
             f.close()
 
