@@ -31,10 +31,16 @@ class Factory(ManufacturingProcess):
                             self.processes[i][j].arriveProduct(product)
                         plt.text(100, 50 + i * 100, self.processes[i][j].getListString(), style='italic')
 
+                    # 마지막 complete 노드.
                     elif j == 3:
+                        # 마지막 바로 전에 있는 product 뽑아내기.
                         product = self.processes[i][j - 1].leaveProduct()
+                        # product가 그 위치에 있으면,
                         if product != 'none':
+                            # 아까 뽑아낸 product를 completedProduct에 추가.
                             self.completedProduct.addLast(product)
+                        # completeList에 그 동안 추가한 product 출력.
+                        # 이제 이게 10이면 while loop 종료.
                         plt.text(100 + j * 50, 100, self.completedProduct.getListString(), style='italic')
 
                     else:
@@ -46,4 +52,3 @@ class Factory(ManufacturingProcess):
             plt.text(50, 100, self.waitingProduct.getListString(), style='italic')
             plt.axis([0, 350, 0, 200])
             plt.show()
-
