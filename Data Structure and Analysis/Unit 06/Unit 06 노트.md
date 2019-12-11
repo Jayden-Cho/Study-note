@@ -39,20 +39,17 @@
 
 **Tree as an Abstract Data Type**
 
-- Tree structure
-  - Abstract data type.
+- Tree structure - abstract data type.
   - Data stored
     - As a tree structure.
   - Operatons
-    - Ordinary data structure operations just as linked lists
+    - Ordinary data structure operations just as linked lists :
       - Insert
       - Delete
       - Search
-    - Special searching approaches for trees and networks
-      - <u>Traverse</u>
-
-- 어떤 ADT를 가지고 있는지 확인해보자. 
-
+    - Special searching approaches for trees and networks :
+      - <u>Traverse</u>. 각각의 노드를 한번만 체계적인 방법으로 방문하는 과정.
+  
 - 일반적인 트리와 다르게 upside down. 
   - 위의 뿌리에서 밑의 줄기로 뻗어나간다. 
 - 기본적인 data structure의 operation을 지원해준다. 이외에도 특별한 'traverse'가 가능하다.
@@ -65,10 +62,8 @@
   - Corporate structures
   - Group bank accounts
   - Command and control structures
-- Why is the structure one of the most favorite structures?
+- Why is this structure one of the most favorite structures?
   - A clear approach of *Divide and Conquer*.
-- 다양한 곳에서 볼 수 있다.
-  - 조직도, 법인 계좌, 지위 체계.
 - 공통적으로 divide and conquer를 할 수 있다.
   - 데이터의 특성을 반영해서 divide하고 그리고 그것을 conquer하는게 tree structure.
   - Tree 구조를 다룰 때도 recursion 사용.
@@ -77,14 +72,14 @@
 
 **Structure of Stored Data**
 
-- Nothing but with multiple *'next'*s
-  - Each node has multiple next nodes
+- Nothing but with multiple *'next'*s.
+  - Each node has multiple next nodes.
   - Particularly, this structure maintains the next nodes as an array or variables.
 
 - Linked list는 노드들을 정의.
   - 노드에는 Object, Next를 저장하는 reference 두 개가 존재한다.
 - Tree 구조는 노드에 다수의 next reference를 가지고 있을 수 있다.
-  - Next가 많으니까 그에 대한 rule를 제대로 설정해야.
+  - Next가 많으니 그에 대한 rule를 제대로 설정해야.
 
 <br>
 
@@ -110,7 +105,7 @@
 
 ![a](https://imgur.com/Fj6cA7B.png)
 
-- root에서 파생 모든 노드들을 **descendant** 라고 부른다.
+- root에서 파생된 모든 노드들을 **descendant** 라고 부른다.
 - 하나의 노드의 이전 노드들을 **ancestor** 라고 부른다.
 - **Path** 라는 것은 root의 위치에서 특정 노드까지의 최단 거리.
 
@@ -125,7 +120,7 @@
 
 - 특정 노드의 **degree**는 특정 노드가 가질 수 있는 child의 개수.
   - Next reference의 개수.
-- Tree의 size는 Tree 속 노드의 개수.
+- Tree의 **size**는 Tree 속 노드의 개수.
 
 <br>
 
@@ -183,8 +178,8 @@
   - Tree with degree 2
 - Binary search tree
   - Tree with degree 2
-  - Tree designed for a fast search of stored data
-  - So far, what we have studied the definitions and the characteristics of stored data.
+  - Tree designed for a fast search of stored data.
+  - So far, what we have studied is the definitions and the characteristics of stored data.
   - Now, this is related to the operations
   - **How to perform a faster search?**
 
@@ -214,17 +209,17 @@
 
 **Implementation of Tree Node**
 
-- Has 3 references
+- Has 4 references :
   - Left hand side (LHS)
   - Right hand side (RHS)
   - Its own value
   - Its parent node
   - Not implemented here, but
     - LHS stores
-      - Values have lower than its own value
+      - Values have lower than its own value.
     - RHS stores
-      - Values have higher than its own value
-    - Just as we all know that the department stores do not have a restroom on the first floor
+      - Values have higher than its own value.
+    - Just as we all know that the department stores do not have a restroom on the first floor.
 - Other than four references,
   - Simple get/set methods
     - What are the get/set methods?
@@ -301,5 +296,5 @@ class BinarySearchTree:
 
 - BST handles the data stored through its root
   - Root has its own value.
-  - Tree instance access to the root
+  - Tree instance access to the root.
   - Only through the root, the tree instances access to the descendant nodese of the root.
