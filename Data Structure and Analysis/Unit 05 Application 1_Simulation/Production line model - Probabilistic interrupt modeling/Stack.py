@@ -6,13 +6,9 @@ class Stack(ProductionList):
         self.List = ProductionList('')
 
     def add(self, Object):
-        # Problem 2. complete the add function of Stack
-        # remember Stack has FIFO characteristics
         self.List.addFirst(Object)
 
     def get(self):
-        # Problem 2. complete the remove function of Stack
-        # remember Stack has FIFO characteristics
         Object = self.List.removeFirst()
         return Object
 

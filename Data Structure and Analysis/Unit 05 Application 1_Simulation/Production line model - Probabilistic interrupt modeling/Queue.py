@@ -5,13 +5,9 @@ class Queue(ProductionList):
         self.List = ProductionList('')
 
     def add(self, Object):
-        # Problem 3. complete the add function of Queue
-        # remember Queue has LIFO characteristics
         self.List.addLast(Object)
 
     def get(self):
-        # Problem 3. complete the remove function of Queue
-        # % remember Queue has LIFO characteristics
         Object = self.List.removeFirst()
         return Object
 

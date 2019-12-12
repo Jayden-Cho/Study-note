@@ -23,9 +23,7 @@ class PlanNode:
         return node
 
     def setNextNode(self, node):
-        # Problem 1. complete this method
         self.nextNode = node
 
     def setPrevNode(self, node):
-        # Problem 1. complete this method
         self.prevNode = node
