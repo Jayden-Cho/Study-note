@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67a8be97-301e-470e-bb79-000caf0452f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Unit 03 Linked List, Stack and Queue/Production line model - Stack and queue implementation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 03 Linked List, Stack and Queue/Production line model - Stack and queue implementation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Production line model - Scheduling with dynamic programming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Production line model - Scheduling with dynamic programming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Production line model - Scheduling with dynamic programming/PlanNode.py 분석.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Production line model - Scheduling with dynamic programming/PlanNode.py 분석.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Production line model - Scheduling with dynamic programming/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Unit 04  Recursion and Dynamic Programming/Production line model - Scheduling with dynamic programming/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Baekjoon/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Baekjoon/Untitled.ipynb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlanNode.py" beforeDir="false" afterPath="$PROJECT_DIR$/PlanNode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Queue.py" beforeDir="false" afterPath="$PROJECT_DIR$/Queue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stack.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stack.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Unit 06/Unit 06 노트.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Finance Analysis/Pandas를 이용한 Naver금융에서 주식데이터 가져오기.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Finance Analysis/Pandas를 이용한 Naver금융에서 주식데이터 가져오기.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/Factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Factory.py 분석.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Factory.py 분석.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,11 +19,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Factory.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="82" column="18" lean-forward="true" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
+            <state relative-caret-position="498">
+              <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#2525#2723#0" />
+                <element signature="e#291#783#0" />
               </folding>
             </state>
           </provider>
@@ -46,11 +41,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ProductionList.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+            <state relative-caret-position="765">
+              <caret line="51" selection-start-line="51" selection-end-line="52" selection-end-column="70" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#1411#2451#0" />
                 <element signature="e#2490#2678#0" />
                 <element signature="e#2718#2986#0" />
                 <element signature="e#3022#3385#0" />
@@ -65,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/Queue.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -82,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ManufacturingProcess.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="75">
               <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -126,7 +120,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -206,7 +200,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18884121" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19384836" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -228,23 +222,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Plan-2012.12.24.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Stack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PlanNode.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -255,13 +232,20 @@
     <entry file="file://$PROJECT_DIR$/Queue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ManufacturingProcess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="75">
           <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
@@ -269,13 +253,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/PlanNode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plan-2012.12.24.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/ProductionList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        <state relative-caret-position="765">
+          <caret line="51" selection-start-line="51" selection-end-line="52" selection-end-column="70" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#1411#2451#0" />
             <element signature="e#2490#2678#0" />
             <element signature="e#2718#2986#0" />
             <element signature="e#3022#3385#0" />
@@ -287,11 +280,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Factory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="82" column="18" lean-forward="true" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
+        <state relative-caret-position="498">
+          <caret line="126" lean-forward="true" selection-start-line="126" selection-end-line="126" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#2525#2723#0" />
+            <element signature="e#291#783#0" />
           </folding>
         </state>
       </provider>

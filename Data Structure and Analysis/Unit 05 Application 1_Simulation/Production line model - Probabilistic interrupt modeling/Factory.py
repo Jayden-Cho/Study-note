@@ -120,9 +120,4 @@ class Factory(ManufacturingProcess):
                                 self.processes[i][j].arriveProduct(product)
             cntltr += 1
 
-        fig = plt.figure()
-        plt.text(100 + self.col * 50, 100, self.completedProduct.getListString(), style='italic')
-        plt.axis([0, 450, 0, 200])
-        plt.show()
-
         print('Count Iteration :', cntltr)
