@@ -546,10 +546,11 @@ def findMin(self, node=None):
         - The value in RHS
         - The value that you have
 - Hence there are multiple traversing approaches.
+- 트리 구조안에 있는 노드들을 <u>어떤 순서로</u> 출력해야 할까?에 대한 답. Traversing.
 
 <br>
 
-# Depth First Traverse
+**Depth First Traverse**
 
 - Pre-order traverse
   - Order : Current, LHS, RHS in *Recursion*
@@ -610,37 +611,62 @@ Post-order traverse: 1 - 0 - 2 - 4 - 6 - 8 - 9 - 7 - 5 - 3
 
 **Breadth First Traverse**
 
-- Queue-based level-order traverse
+- <u>Queue-based</u> **level-order** traverse
+  
   - 3, 2, 5, 0, 4, 7, 1, 6, 9, 8
-  - Enqueue the root
-    - While until queue is empty.
+  - Enqueue the root. Root를 queue에 넣는다.
+    - While until queue is empty :
       - Current = Dequeue one element
       - Print current
-      - If Current's LHS exist
+      - If Current's LHS exist :
         - Enqueue current LHS
-      - If Current's RHS exist
+      - If Current's RHS exist :
         - Enqueue curent RHS
+  
 - Depth는 recursion을 사용하고, 그 속에는 stackframe이 들어 있었다.
+
 - 이번에는 queue를 사용해 traverse. 
   - 먼저 root를 enqueue.
     - Queue가 empty할 때까지 while loop.
     - 첫 번째 element를 dequeue. 그 값은 root.
+  
 - Level별로 traverse하기 위해.
+
+- 순서 
+
+  (1) root를 먼저 enqueue한다. 
+
+  (2) queue가 empty될 때 까지 while loop을 돌리는데, 
+
+  ​		(2-1) 먼저 첫 번째 element를 dequeue하고 그 값을 출력한다. 
+
+  ​		(2-2) 그리고 그 첫 번째 element의 LHS, RHS를 차례로 enqueue한다. (3) 그리고 다시 while loop 위로 올라가서 empty될 때 까지 반복한다.
 
 ~~~Python
 def traverseLevelOrder(self):
     ret = []
+    # 1. Queue 먼저 생성.
     Q = Queue()
+    # 2. Queue에 먼저 root 추가.
     Q.enqueue(self.root)
+    # 3. Queue에 없을 때 까지 loop.
     while not Q.isEmpty():
+      	# 3-1. 첫 번째 dequeue.
         node = Q.dequeue()
+        # 3-2. Queue안에 value 없으면 다시 위로.
         if node is None:
             continue
+        # 3-3. value있으면 리스트에 그 value 추가.
         ret.append(node.getValue())
+        # 3-4. LHS, RHS 있으면 Queue에 추가.
         if node.getLHS() is not None:
             Q.enqueue(node.getLHS())
         if node.getRHS() is not None:
             Q.enqueue(node.getRHS())
     return ret
 ~~~
+
+<br>
+
+**Performance of Binary Search Tree**
 
