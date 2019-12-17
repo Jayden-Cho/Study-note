@@ -117,19 +117,43 @@ result:
 
 # Importance of Efficiency
 
-- Writing a working program is not good enough
-  - The program could be inefficient
-  - If the program runs on a large data, the running time becomes a big issue
-    - Sometimes, a program may not be usable because of the efficiency
+- Writing a working program is not good enough.
+  - The program could be inefficient.
+  - If the program runs on a large data, the running time becomes a big issue.
+    - Sometimes, a program may not be usable because of the efficiency.
     - Imagine a transaction system of a financial company.
       - 1 transaction = 0.001 sec
       - 10 transactions by 10,000 account holders = 100 sec
-      - Side effect
-        - If there is no reaction from the system, the users click the request again
-        - Increased requests when there is a delay
-    - Imagine a bubble sorting function for bank accounts
-      - 10,000 accounts need roughly 50,000,000 iterations for sorting
-- Therefore, we need a guarantee of the worst-case scenario
-  - The worst-case running time of a single transaction
-  - The worst-case transaction request numbers of a single day
+      - Side effect :
+        - If there is no reaction from the system, the users click the request again.
+        - Increased requests when there is a delay.
+    - Imagine a bubble sorting function for bank accounts.
+      - 10,000 accounts need roughly 50,000,000 iterations for sorting.
+- Therefore, we need a guarantee of the worst-case scenario.
+  - The worst-case running time of a single transaction.
+  - The worst-case transaction request numbers of a single day.
+- 프로그램이 '동작하는 것' 만으로 충분하지 않다.
+  - 돌아가는데 3년걸린다면 큰일난다. 비효율적이면 안된다.
+  - runtime이 중요한 이슈. inefficiency 때문에 프로그램이 사장되는 경우도 많음.
+- 항상 프로그래머는 최악을 생각해야 한다.
 
+<br>
+
+# Definition of Algorithm Analysis and Examples
+
+ **Definition of Algorithm Analysis**
+
+- Analyzing an algorithm
+  - Estimating the resources that the algorithm requires
+    - Memory
+    - Communication bandwidth
+    - Computational time (the most important resource in the most of cases)
+- Factors affecting the running time
+  - Computer used for executions
+  - Algorithms
+  - Data structures
+  - Input data size
+- After analyzing the algorithms
+  - We estimate the worst-case of the costs by the factors
+    - i.e. Computational time by input data size
+    - i.e. Iterations by input data size
