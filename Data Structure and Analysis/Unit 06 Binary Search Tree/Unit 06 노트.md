@@ -552,6 +552,9 @@ def findMin(self, node=None):
 
 **Depth First Traverse**
 
+![a](https://i.imgur.com/YyBgZ7p.png)
+
+
 - Pre-order traverse
   - Order : Current, LHS, RHS in *Recursion*
 - In-order traverse
@@ -669,4 +672,6 @@ def traverseLevelOrder(self):
 <br>
 
 **Performance of Binary Search Tree**
+
+![a](https://i.imgur.com/eBUt2wD.png)
 
