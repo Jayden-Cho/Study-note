@@ -1,21 +1,9 @@
-import random
+def calculateIntegerRangeSum(intFrom, intTo):
+    intSum = 0
 
-def performSelectionSort(lst):
-    for itr1 in range(0, len(lst)):
-        for itr2 in range(itr1+1, len(lst)):
-            if lst[itr1] < lst[itr2]:
-                lst[itr1], lst[itr2] =\
-                lst[itr2], lst[itr1]
-    return lst
+    for itr in range(intFrom, intTo):
+        intSum = intSum + itr
 
-N = 10
-lstNumbers = list(range(N))
-random.shuffle(lstNumbers)
+    return intSum
 
-print(lstNumbers)
-print(performSelectionSort(lstNumbers))
-
-lstNumbers2 = [2, 5, 0, 3, 3, 3, 1, 5, 4, 2]
-
-print(lstNumbers2)
-print(performSelectionSort(lstNumbers2))
+print(calculateIntegerRangeSum(0, 10))
