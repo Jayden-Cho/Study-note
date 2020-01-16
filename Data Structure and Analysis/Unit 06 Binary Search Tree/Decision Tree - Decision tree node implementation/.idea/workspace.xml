@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcadc8a6-0992-49c7-bbb6-2c83274b2ce1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Unit 08 Priority Queue and Heap/IE362-Week Offline Week 9-icmoon-ver-1.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 08 Priority Queue and Heap/Lec 9 실습영상.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 08 Priority Queue and Heap/decisiontree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 08 Priority Queue and Heap/decisiontreenode (1).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 08 Priority Queue and Heap/house-votes-84 (1).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 08 Priority Queue and Heap/house-votes-84. (1).xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 08 Priority Queue and Heap/randomforest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 08 Priority Queue and Heap/voterecord (1).py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/GUIExecution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/GeneticAlgorithm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/GeneticAlgorithmProblem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/IE260-Week Offline Week 10-icmoon-ver-1.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/Lec 10 실습영상.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/TSP1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/TSPDatasetGenerator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/TSPExecution.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/TravelingSalesmanProblem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Unit 09 Application 2 Genetic Algorithm/TravelingSalesmanProblemGUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/실습 06 분석-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/실습 06 분석-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/실습 06 분석.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/실습 06 분석.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,14 +36,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/decisiontreenode.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+            <state relative-caret-position="1230">
+              <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#478#790#0" />
-                <element signature="e#1540#1800#0" />
-                <element signature="e#1848#2194#0" />
-                <element signature="e#2258#3005#0" />
               </folding>
             </state>
           </provider>
@@ -32,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/voterecord.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="18" lean-forward="true" selection-end-line="14" selection-end-column="18" />
+              <caret line="14" column="18" selection-end-line="14" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -45,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="36" selection-end-line="8" selection-end-column="38" />
+            <state relative-caret-position="165">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -72,10 +89,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="730" />
-    <option name="width" value="710" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="48" />
+    <option name="y" value="23" />
+    <option name="width" value="1392" />
+    <option name="height" value="806" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -83,7 +101,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,6 +112,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -197,15 +215,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="806" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.021459227" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31792718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -233,19 +250,12 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/house-votes-84.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/decisiontreenode.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        <state relative-caret-position="1230">
+          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#478#790#0" />
-            <element signature="e#1540#1800#0" />
-            <element signature="e#1848#2194#0" />
-            <element signature="e#2258#3005#0" />
           </folding>
         </state>
       </provider>
@@ -253,14 +263,17 @@
     <entry file="file://$PROJECT_DIR$/voterecord.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="18" lean-forward="true" selection-end-line="14" selection-end-column="18" />
+          <caret line="14" column="18" selection-end-line="14" selection-end-column="18" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/house-votes-84.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="36" selection-end-line="8" selection-end-column="38" />
+        <state relative-caret-position="165">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>

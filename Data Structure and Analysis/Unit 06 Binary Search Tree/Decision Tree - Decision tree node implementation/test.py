@@ -1,9 +1,12 @@
-def calculateIntegerRangeSum(intFrom, intTo):
-    intSum = 0
+import numpy as np
+def whatFloor(A, B):
+    ary = np.zeros((A+1, B+1)).astype(int)
 
-    for itr in range(intFrom, intTo):
-        intSum = intSum + itr
+    ary[0] = np.arange(0, B+1)
 
-    return intSum
+    for i in range(1, A+1):
+        for j in range(B+1):
+            ary[i][j] = sum(ary[i-1][:j+1])
+    return ary[A][B]
 
-print(calculateIntegerRangeSum(0, 10))
+print(whatFloor(1, 3))
