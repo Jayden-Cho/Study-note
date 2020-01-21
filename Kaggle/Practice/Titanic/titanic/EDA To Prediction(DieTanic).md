@@ -231,7 +231,58 @@
 
 
 
-EDA를 통해 데이터에 대한 인사이트를 얻고, feature engineering을 통해 feature들을 모델링에 적용될 수 있게 변형시켰다. 하지만 아직 그것으로 예측할 
+EDA를 통해 데이터에 대한 인사이트를 얻고, feature engineering을 통해 feature들을 모델링에 적용될 수 있게 변형시켰다. 하지만 아직 그것으로 예측할 수 없음. 분류 알고리즘을 사용하여 예측할 차례.
+
+
+
+### A. 각각 7개의 모델을 훈련/예측
+
+- 모델링에 필요한 패키지들 import.
+- 모델 7개 train시키고 predict.
+  - KNN은 neighbor 개수에 따라 예측값이 달라지므로 neighbor 개수 조절.
+    -  `pd.Series()` 를 생성하고 n_neighbor에 따른 예측값을 저장.
+
+
+
+### B. Cross Validation
+
+- 정확도만 높아서는 안됨. 특정 dataset이 overfit될 가능성 있음. 교차검증은 필수.
+
+  - 먼저 교차검증에 필요한 패키지들 import.
+  - 10개의 bin을 가진 KFold 생성.
+  - 7개의 모델에 `cross_val_score` 적용.
+    - 적용된 값 `cv_result`를 초기화하고 그값의 mean과 std를 구한다.
+  - 구한 값들을  `pd.DataFrame()`에 저장.
+
+  
+
+- 시각화 - 위에서 구한 7개 모델의 예측값들을 `boxplot()`.
+
+  - 우리가 현재 가지고 있는건 예측값과 classifier의 인덱스 뿐. 이것을 `pd.DataFrame()`으로 만들어 plot을 할 수 있게 변형.
+
+
+
+- 시각화 - 교차검증 평균 예측값을 시각화
+  - 7가지 모델이 존재하니 `plot.barh()`로 정렬.
+
+
+
+- 시각화 - 7개 모델에 confusion matrix 적용.
+  - `cross_val_predict()`으로 각 모델 교차검증.
+  - 교차검증된 예측값과 실젯값으로 `sns.heatmap()` 안에  `confusion_matrix()` 대입.
+
+
+
+### C. Hyper-Parameter Tuning
+
+- 가장 성능 좋은 모델 두 개에 GridSearchCV 사용.
+
+
+
+### D. Ensembling
+
+- 모델 성능을 높이는 방법. 약한 모델의 합으로 강한 모델을 만든다.
+- Voting Classifier, Bagged(KNN, Decision Tree), Boosting(Adaptive, Gradient. XgBoost는 주피터에서 불가능)
 
 
 
@@ -247,8 +298,7 @@ EDA를 통해 데이터에 대한 인사이트를 얻고, feature engineering을
 
 로드맵
 
-1. Part 2, 3 정리 - fork된 노트북 이용해서.
-2. 전체 모두 복사해서 commit해보기.
+2. 남은 Part 3 카피하고 commit해보기.
 3. 다음 넘어가기 - 전체 그냥 script로 글씨 안보고 코딩만해서 commit.
 4. 전체 파트 별 정리
 5. 전체 모두 복사해서 commit. 
