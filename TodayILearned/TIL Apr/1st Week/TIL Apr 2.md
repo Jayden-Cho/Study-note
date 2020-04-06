@@ -69,7 +69,7 @@ def merge_sort(a):
 
 <br><br>
 
-# Machine Learning
+# NumPy
 
 **슬라이싱, 팬시 인덱싱, 불린 인덱싱**
 
@@ -80,8 +80,7 @@ print('슬라이싱:\n', array[0:2, 1])
 print('팬시 인덱싱:\n', array[1:2, [0, 1]])
 print('불린 인덱싱:\n', array[array<5])
 
-'''
-result:
+'''result:
 원본 행렬:
  [[1 2 3]
  [4 5 6]
@@ -91,8 +90,7 @@ result:
 팬시 인덱싱:
  [[4 5]]
 불린 인덱싱:
- [1 2 3 4]
- '''
+ [1 2 3 4]'''
 ~~~
 
 <br>
@@ -180,12 +178,10 @@ b = np.array([[5, 6],
 
 print('내적:\n', np.dot(a, b))
 
-'''
-result:
+'''result:
 내적:
  [[19 22]
- [43 50]]
- '''
+ [43 50]]'''
 ~~~
 
 ~~~python
@@ -195,11 +191,9 @@ a = np.array([[1, 2],
 
 print('전치 행렬:\n', np.transpose(a))
 
-'''
-result:
+'''result:
 전치 행렬:
  [[1 3]
- [2 4]]
- '''
+ [2 4]]'''
 ~~~
 

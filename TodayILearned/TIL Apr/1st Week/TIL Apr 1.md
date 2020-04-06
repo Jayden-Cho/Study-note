@@ -5,6 +5,12 @@
 **이해하기 쉬운 삽입 정렬 알고리즘**
 
 ~~~python
+# a의 첫 번째 value를 result 리스트에 넣고
+# 두 번째 부터 result의 value랑 비교를 하는데,
+# 리스트 안의 값보다 작으면 해당 값의 인덱스에 삽입.
+# 리스트 안의 값보다 크면 다음 인덱스로. 
+# 리스트 끝까지 갔는데 가장 크다면 리스트 끝에 삽입.
+
 def find_ins_idx(a, v):
   for i in range(0, len(a)):
     if v < a[i]:
@@ -55,16 +61,14 @@ def ins_sort(a):
 
 - ndarray는 넘파이의 기본 데이터 타입.
 
-- `array()`함수로 리스트를 ndarray 형태로 변환 가능하다.
+- `array()`함수로 리스트를 ndarray 형태로 변환할 수 있다.
 
 ~~~python 
 array = np.array([1, 2, 3])
 print(array, type(array))
 
-'''
-result:
-[1 2 3] <class 'numpy.ndarray'>
-'''
+'''result:
+[1 2 3] <class 'numpy.ndarray'>'''
 ~~~
 
 <br>
@@ -98,28 +102,22 @@ lst = [1, 2, 'test']
 array = np.array(lst)
 print(array, array.dtype)
 
-'''
-result:
-['1' '2' 'test'] <U21
-'''
+'''result:
+['1' '2' 'test'] <U21'''
 ~~~
 
 <br>
 
 **arange(), zeros(), ones()**
 
-
-
 ~~~python
 seq_array = np.arange(10)
 print(seq_array)
 print(seq_array.dtype, seq_array.shape)
 
-'''
-result:
+'''result:
 [0 1 2 3 4 5 6 7 8 9]
-int64 (10,)
-'''
+int64 (10,)'''
 ~~~
 
 `arange()`는 array를 `range()`화 한다고 생각하자.
@@ -131,13 +129,11 @@ zero_array = np.zeros((3, 2), dtype='int32')
 print(zero_array)
 print(zero_array.dtype, zero_array.shape)
 
-'''
-result:
+'''result:
 [[0 0]
  [0 0]
  [0 0]]
-int32 (3, 2)
-'''
+int32 (3, 2)'''
 ~~~
 
 `zeros()`와 `ones()`는 튜플 인자를 크기로 받아 ndarray를 각각 0과 1로 채운다.

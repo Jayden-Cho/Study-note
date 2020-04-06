@@ -66,7 +66,7 @@ def bubble_sort(a):
 
 # Pandas
 
-**DataFrame 생성과 수정**
+**DataFrame과 다른 자료형의 상호 변환**
 
 - DataFrame <--> ndarray
 
@@ -91,4 +91,27 @@ def bubble_sort(a):
 
 <br>
 
-**rr**
+**DataFrame 생성과 수정**
+
+새로운 column을 추가하려면 `DataFrame[]` 내에 새 칼럼명을 입력하고 값을 할당하면 된다.
+
+~~~python
+df['Age'] = 0
+~~~
+
+<br>
+
+기존 칼럼에 연산을 적용해 새로운 칼럼을 생성할 수 있다.
+
+~~~python
+df['Age_10'] = df['Age'] * 10
+~~~
+
+<br>
+
+기존 칼럼 Series도 일괄적으로 업데이트 할 수 있다.
+
+~~~python
+df['Age_10'] = df['Age_10'] * 100
+~~~
+
