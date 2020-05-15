@@ -169,7 +169,7 @@ def quick_sort(lst):
     return lst
   pivot = lst[-1]
   g1, g2 = [], []
-  for i in range(0, n-1):
+  for i in range(0, n-1):  # 마지막 value는 pivot으로 사용되므로 꼭 제외.
     if lst[i] < pivot:
       g1.append(lst[i])
     else:
@@ -231,9 +231,6 @@ def binary_search(lst, val):
       start = mid + 1
     else:
       end = mid - 1
-      
-a = [1, 2, 3, 4, 5]
-binary_search(a, 4)
 ~~~
 
 
@@ -256,3 +253,6 @@ def binary_search(lst, val):
   return binary_search_sub(lst, val, 0, len(lst)-1)
 ~~~
 
+<br>
+
+재귀 호출을 사용할 때는 꼭 탈출 조건을 넣어야 한다는 걸 잊지 말자. 
